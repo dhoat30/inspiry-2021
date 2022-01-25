@@ -1,0 +1,104 @@
+/*global */ 
+.sub-nav-container>div ul a{ 
+    padding: 0 0 !important;
+    display: inline-block;
+    margin: 3px 0;
+}
+ .sub-nav-container>div ul a:hover{ 
+    text-decoration: underline;
+}
+.sub-nav-container img{ 
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+
+}
+
+
+/*design services */ 
+#top-navbar{ 
+    position: relative;
+}
+#top-navbar ul { 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.design-services { 
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    z-index: 10;
+    display: none;
+}
+.design-services .sub-nav-container { 
+    display: flex;
+    flex-direction: row;
+   
+    justify-content: center;
+}
+.design-services .sub-nav-container>div{ 
+    max-width: 500px;
+    border: solid green;
+    padding: 10px 20px;
+}
+.design-services .sub-nav-container>div ul { 
+    width: 200px;
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+#mega-menu-inspiry_main_menu{ 
+    border-bottom: 1px solid black !important;
+    border-top: 1px solid black !important;
+}
+.top-navbar{
+    margin: 0 !important;
+}
+
+/*mega menu styling*/ 
+#mega-menu-wrap-inspiry_main_menu #mega-menu-inspiry_main_menu li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-row {
+    width: 100%;
+    /* float: left; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#mega-menu-inspiry_main_menu li.mega-menu-item.mega-menu-megamenu ul.mega-sub-menu ul.mega-sub-menu {
+    visibility: inherit;
+    opacity: 1;
+    width: 1000px;
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* justify-content: center; */
+    display: block;
+    flex-wrap: wrap;
+}
+#mega-menu-wrap-inspiry_main_menu #mega-menu-inspiry_main_menu li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-row > ul.mega-sub-menu > li.mega-menu-columns-3-of-12 {
+    width: 300px;
+}
+/*mega menu styling*/ 
+#mega-menu-wrap-top-navbar #mega-menu-top-navbar li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-row {
+    width: 100%;
+    /* float: left; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#mega-menu-top-navbar li.mega-menu-item.mega-menu-megamenu ul.mega-sub-menu ul.mega-sub-menu {
+    visibility: inherit;
+    opacity: 1;
+    width: 1000px;
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* justify-content: center; */
+    display: block;
+    flex-wrap: wrap;
+}
+#mega-menu-wrap-top-navbar #mega-menu-inspiry_main_menu li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-row > ul.mega-sub-menu > li.mega-menu-columns-3-of-12 {
+    width: 300px;
+}

@@ -1,0 +1,314 @@
+/*board save button area*/
+.design-board-save-btn-container {
+  position: relative;
+  width: 42px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background: #efefef;
+}
+
+.design-board-save-btn-container i {
+  font-size: 20px;
+  position: absolute;
+  top: 7px;
+  left: 5.5px;
+  /* padding: 8px 10px 6px 10px; */
+  cursor: pointer;
+  font-weight: 300 !important;
+  color: var(--red);
+}
+
+.back-icon-container i {
+  font-size: 30px;
+  padding: 8px 10px 6px 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: 300 !important;
+  background: #efefef;
+  color: #303030;
+}
+.back-icon-container i:hover {
+  color: #efefef;
+  background: #303030;
+}
+
+.choose-board-container {
+  margin: 20px 0;
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 95%;
+  max-width: 450px;
+  box-shadow: 3px 3px 20px 1px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  background-color: white;
+}
+.choose-board-container .choose-board {
+  border-bottom: 1px solid #303030;
+  padding: 10px 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.choose-board-container .close-icon {
+  font-size: 20px;
+  font-family: "work-sans", sans-serif;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-weight: 200;
+  cursor: pointer;
+}
+
+.choose-board-container ul {
+  padding: 10px 0px;
+  list-style: none;
+  font-size: 14px;
+  min-height: 150px;
+  height: 200px;
+  overflow: scroll;
+}
+
+.choose-board-container ul li {
+  cursor: pointer;
+  padding: 10px 10px;
+  font-size: 18px;
+
+  cursor: pointer;
+}
+.choose-board-container ul li:hover {
+  color: #303030;
+}
+
+.choose-board-container .create-new-board {
+  border-top: 1px solid black;
+  padding: 0 10px 10px 10px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 0;
+  cursor: pointer;
+  background: #f8f7f3;
+  letter-spacing: 1px;
+  color: #474747;
+  font-weight: 400;
+}
+.choose-board-container .create-new-board i {
+  border-radius: 50%;
+  background: #474747;
+  padding: 10px 10px 7px 10px;
+  margin-right: 10px;
+  color: white;
+  letter-spacing: 1px;
+  font-size: 20px;
+  margin-top: 5px;
+}
+
+/*board form*/
+.project-save-form-section {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+  display: none;
+}
+.project-save-form-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  max-width: 500px;
+  transform: translate(-50%, -50%);
+  background: white;
+  z-index: 10000;
+}
+
+.project-save-form-container .form-title {
+  padding: 20px 20px;
+}
+.project-save-form-container .form-underline {
+  border-top: 1px solid #303030;
+  opacity: 50%;
+}
+.project-save-form-container form {
+  padding: 10px 20px 30px 20px;
+}
+
+.project-save-form-container form input,
+label {
+  display: block;
+}
+.project-save-form-container form label {
+  margin: 20px 0 5px 0;
+  font-family: "work-sans", sans-serif;
+  font-weight: 300;
+}
+.project-save-form-container form input {
+  width: 300px;
+  height: 40px;
+  padding: 5px;
+  font-family: "work-sans", sans-serif;
+}
+.project-save-form-container form textarea {
+  border: 1px solid #303030 !important;
+  width: 300px;
+  padding: 5px;
+  font-family: "work-sans", sans-serif;
+}
+.project-save-form-container .btn-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
+  margin-top: 30px;
+}
+
+/*toggle button*/
+.toggle-btn-container {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: center;
+}
+.toggle-btn-container .toggle-status {
+  margin-left: 10px;
+  position: relative;
+  top: 7px;
+}
+.toggle-status-info {
+  height: 50px;
+  max-width: 300px;
+}
+.tgl {
+  position: relative;
+  outline: 0;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+  margin: 0 0 5px 0;
+  width: 100px;
+}
+.tgl,
+.tgl:after,
+.tgl:before,
+.tgl *,
+.tgl *:after,
+.tgl *:before,
+.tgl + .tgl-btn {
+  box-sizing: border-box;
+}
+.tgl::selection,
+.tgl:after::selection,
+.tgl:before::selection,
+.tgl *::selection,
+.tgl *:after::selection,
+.tgl *:before::selection,
+.tgl + .tgl-btn::selection {
+  background: none;
+}
+.tgl span {
+  position: relative;
+  display: block;
+  height: 1.2em;
+  line-height: 1.2em;
+  overflow: hidden;
+  font-weight: normal;
+  text-align: center;
+  border-radius: 2em;
+  padding: 0.2em 1em;
+  border: 1px solid #fafafa;
+  box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.2), 0 2px 0 rgba(255, 255, 255, 0.7);
+  transition: color 0.3s ease, padding 0.3s ease-in-out,
+    background 0.3s ease-in-out;
+}
+.tgl span:before {
+  position: relative;
+  display: block;
+  line-height: 1.3em;
+  padding: 0 0.2em;
+  font-size: 1em;
+}
+.tgl span:after {
+  position: absolute;
+  display: block;
+  content: "";
+  border-radius: 50%;
+  width: 0.7em;
+  height: 0.7em;
+  margin-left: -1.2em;
+  top: 0.25em;
+  background: #ffffff;
+  transition: left 0.3s cubic-bezier(0.175, 0.885, 0.32, 0.97),
+    background 0.3s ease-in-out;
+}
+.tgl input[type="checkbox"] {
+  display: none !important;
+}
+.tgl input[type="checkbox"]:not(:checked) + span {
+  background: #de474e;
+  color: #ffffff;
+  padding-left: 1.3em;
+  padding-right: 0.4em;
+}
+.tgl input[type="checkbox"]:not(:checked) + span:before {
+  content: attr(data-off);
+  color: #ffffff;
+}
+.tgl input[type="checkbox"]:not(:checked) + span:after {
+  background: #ffffff;
+  left: 1.6em;
+}
+.tgl input[type="checkbox"]:checked + span {
+  background: #86d993;
+  color: #ffffff;
+  padding-left: 0.4em;
+  padding-right: 1.6em;
+}
+.tgl input[type="checkbox"]:checked + span:before {
+  content: attr(data-on);
+}
+.tgl input[type="checkbox"]:checked + span:after {
+  background: #ffffff;
+  left: 100%;
+}
+.tgl input[type="checkbox"]:disabled,
+.tgl input[type="checkbox"]:disabled + span,
+.tgl input[type="checkbox"]:read-only,
+.tgl input[type="checkbox"]:read-only + span {
+  cursor: not-allowed;
+}
+.tgl-gray input[type="checkbox"]:not(:checked) + span {
+  background: #e3e3e3;
+  color: #999999;
+}
+.tgl-gray input[type="checkbox"]:not(:checked) + span:before {
+  color: #999999;
+}
+.tgl-gray input[type="checkbox"]:not(:checked) + span:after {
+  background: #ffffff;
+}
+.tgl-inline {
+  display: inline-block !important;
+  vertical-align: top;
+}
+.tgl-inline.tgl {
+  font-size: 16px;
+}
+.tgl-inline.tgl span {
+  min-width: 50px;
+}
+.tgl-inline.tgl span:before {
+  line-height: 1.4em;
+  padding-left: 0.4em;
+  padding-right: 0.4em;
+}
+.tgl-inline-label {
+  display: inline-block !important;
+  vertical-align: top;
+  line-height: 26px;
+}

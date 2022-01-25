@@ -1,0 +1,344 @@
+/*trade hero section */
+.trade-hero {
+  padding-top: 40.6381%;
+  position: relative;
+  display: grid;
+  height: inherit;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+@media (max-width: 500px) {
+  .trade-hero {
+    width: 100%;
+    height: 300px;
+    max-height: 300px;
+  }
+
+  .trade-hero img {
+    width: 100%;
+    height: 300px;
+    max-height: 800px;
+    object-fit: cover;
+  }
+}
+/*header Section */
+.trade-header-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: auto;
+  margin: 20px 0;
+}
+.trade-profile-img {
+  width: 25%;
+  position: relative;
+  bottom: 100px;
+}
+.header-middle-column {
+  width: 50%;
+}
+.header-contact {
+  width: 25%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.header-contact > div {
+  margin: 0 10px 10px 10px;
+}
+.trade-profile-img img {
+  width: 220px;
+  height: 200px;
+  object-fit: cover;
+}
+.trade-header-section .header-address {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.trade-header-section .header-address i {
+  margin-right: 5px;
+}
+
+.header-contact-btn button {
+  background: #303030 !important;
+  border-bottom: none !important;
+  font-size: 16px;
+  letter-spacing: 0.2em;
+  line-height: 1.3em;
+  border: none;
+  cursor: pointer;
+  color: white;
+  margin-bottom: 15px;
+  float: right;
+  width: 170px;
+  height: 40px;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+}
+.header-contact-btn button:hover {
+  background: #525659 !important;
+}
+
+@media (max-width: 1135px) {
+  .trade-header-section {
+    bottom: 100px;
+    position: relative;
+  }
+
+  .header-contact-btn button {
+    position: fixed !important;
+    bottom: 60px;
+    right: 20px;
+  }
+  .trade-profile-img {
+    width: 100%;
+    bottom: 0px;
+  }
+  .trade-profile-img img {
+    display: block;
+    margin: 0 auto;
+  }
+  .header-middle-column {
+    width: 80%;
+    margin-top: 20px;
+  }
+  .header-contact {
+    width: 20%;
+    margin-top: 20px;
+  }
+}
+
+/*trade  main row*/
+.trade-middle-column {
+  margin: 30px auto 0 auto;
+  width: 50%;
+}
+
+.trade-nav-container .nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0 0 20px 0;
+}
+.trade-nav-container .nav li {
+  cursor: pointer;
+  text-align: center;
+  width: 140px;
+  padding: 10px 20px;
+  margin: 5px 10px 0 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: "Playfair Display", serif !important;
+  border: 2px solid #303030;
+}
+
+.trade-nav-container .nav li:hover {
+  color: white;
+  background: #525659;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+}
+
+.trade-about-nav-content {
+  display: block;
+}
+.trade-contact-nav-content {
+  display: none;
+}
+.trade-project-nav-content {
+  display: none;
+}
+.trade-gallery-nav-content {
+  display: none;
+}
+.active-nav {
+  background-color: #303030;
+  color: white;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+}
+
+@media (max-width: 1135px) {
+  .trade-middle-column {
+    margin: 30px auto 0 auto;
+    width: 100%;
+  }
+}
+
+/*contact tab*/
+
+.trade-contact-nav-content table tr td {
+  color: #303030;
+  padding: 0 10px 10px 0 !important;
+  font-family: "Poppins", sans-serif !important;
+}
+
+.trade-contact-nav-content i {
+  font-size: 25px;
+}
+.trade-contact-nav-content i:hover {
+  color: black;
+}
+.trade-contact-nav-content .social-media-icons {
+  display: none;
+}
+/*hide save pin in project area */
+.trade-project-nav-content .geodir-list-save-container {
+  display: none;
+}
+.trade-project-nav-content .trade-directory {
+  width: 100% !important;
+  justify-content: flex-start;
+  padding: 0 0 100px 0;
+}
+.trade-project-nav-content .main-cards {
+  width: 250px !important;
+  height: 300px !important;
+  margin: 20px 20px 20px 0;
+}
+.trade-project-nav-content .main-cards img {
+  width: 250px !important;
+  height: 300px !important;
+}
+.trade-project-nav-content .main-cards .flex {
+  margin: 0;
+}
+.trade-project-nav-content .main-cards .flex .card {
+  width: 250px !important;
+  margin: 0;
+  transition: 800ms;
+  transition-timing-function: ease-in-out;
+  position: relative;
+}
+.trade-project-nav-content .main-cards .flex .logo {
+  background: white !important;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: static;
+}
+.trade-project-nav-content .main-cards .flex .title {
+  padding-top: 10px;
+}
+
+@media (max-width: 570px) {
+  .trade-project-nav-content .main-cards {
+    width: 250px !important;
+    height: 300px !important;
+    margin: 20px 20px 70px 0;
+  }
+}
+/*contact from*/
+.nf-form-content button,
+.nf-form-content input[type="button"],
+.nf-form-content input[type="submit"] {
+  background: #333;
+  border: 0;
+  color: white !important;
+  transition: all 0.5s;
+}
+.nf-form-content button,
+.nf-form-content input[type="button"]:hover {
+  background: white !important;
+  border: 0;
+  color: #333 !important;
+  transition: all 0.5s;
+  border: 1px solid #333;
+}
+@media (max-width: 1135px) {
+  .trade-main-row {
+    position: relative;
+    bottom: 80px;
+  }
+}
+
+/* project */
+.geodir-image-container ul.geodir-images.geodir-gallery li {
+  width: 100%;
+}
+
+/*gallery*/
+
+.trade-directory .geodir-category-list-view {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.trade-directory .geodir-post {
+  width: 250px !important;
+  margin: 10px 20px 10px 0 !important;
+  transition: 800ms;
+  transition-timing-function: ease-in-out;
+}
+.trade-directory .geodir-post:hover {
+  transform: translateY(-10px);
+}
+.trade-directory .geodir-post .geodir-post-content-container,
+.geodir-post-rating,
+.gd-badge-meta,
+.geodir-post-fav {
+  display: none !important;
+}
+.geodir-image-container ul.geodir-images li img {
+  border-radius: 0 !important;
+  object-fit: cover;
+  width: 100% !important;
+}
+.geodir-image-container ul.geodir-images li {
+  border-radius: 0 !important;
+}
+.geodir-entry-title a {
+  color: #303030 !important;
+  font-size: 16px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  display: inline-block;
+  font-weight: 400;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+/*project 
+.trade-project-nav-content .geodir-category-list-view{ 
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.trade-project-nav-content .geodir-category-list-view>li{ 
+    width: 250px !important;  
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+}
+.trade-project-nav-content .geodir-category-list-view>li:hover{ 
+    transform: translate(0px,-5px); 
+}
+.geodir-image-container ul.geodir-images li img {
+    border-radius: 0 !important;
+   
+}
+
+.trade-project-nav-content .gd-badge-meta-new, .geodir-post-rating, .geodir-post-fav{ 
+    display: none !important;
+}
+.trade-project-nav-content .geodir-post-content-container{ 
+    margin-top: -10px !important;
+}
+.trade-project-nav-content .geodir-field-post_content{ 
+    color: black; 
+    font-family: 'work sans', sans-serif;
+}
+.trade-project-nav-content .geodir-entry-title a{ 
+    text-decoration: none;
+}
+*/

@@ -1,0 +1,16 @@
+.lity-container a{ 
+    color: #303030;
+}
+
+.gd-list-action-add{ 
+    background: #F8F7F3 !important;
+    font-weight: 500 !important;
+}
+.gd-badge-meta-save-to-a-new-design-board>div{ 
+    background: #F8F7F3 !important;
+    font-size: 15px;
+    font-weight: 500 !important;
+    margin: 10px 0 0 0;
+    letter-spacing: 1px;
+    padding: 15px 10px;
+}

@@ -1,0 +1,349 @@
+
+.trade-directory{ 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.trade-directory>div:nth-child(1){ 
+    width: 280px;
+}
+.trade-directory>div:nth-child(2){ 
+   width: calc(100% - 320px);
+    margin: 0 0 0 auto;
+}
+
+.trade-directory>div{
+    margin: 0 0;
+}
+
+
+.project-page .card{
+    margin: 0 2vw 100px 0 !important;
+}
+.trade-directory .main-cards .facetwp-template{ 
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+.trade-directory .main-cards .facetwp-template .card{ 
+    width: 22%;
+    height: 22vw;
+    margin: 0 2vw 5vw 0 ;
+    transition: 800ms;
+    transition-timing-function: ease-in-out;
+    position: relative;
+}
+.trade-directory .main-cards .flex .card .title{ 
+    top: -10px;
+    position: relative;
+}
+
+
+
+
+.trade-directory .main-cards .flex .card:hover{ 
+    transform: translateY(-10px);
+}
+.trade-directory .main-cards .flex .logo{ 
+    background: #EFEAE5;
+    height: 20vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.trade-directory .main-cards .flex .logo img{
+    width: 90%;
+    height: auto;
+}
+.project-page .logo img{
+    height: 20vw !important;
+    width: 100% !important;
+    object-fit: cover;
+ }
+
+ 
+@media (max-width:1100px) and (min-width: 780px){ 
+    .trade-directory>div:nth-child(1){ 
+        width: 100%;
+    }
+    .trade-directory>div:nth-child(2){ 
+        width: 100%;
+    }
+    .trade-directory .main-cards .flex .card{ 
+        width: 30% !important;
+        height: 35vw;
+        margin: 0 2vw 100px 0;
+    }
+    .trade-directory .main-cards .flex .logo{ 
+        height: 35vw;
+    }
+    .trade-directory .sidebar{
+        display: none;
+    }
+    .project-page .logo img{
+        height: 35vw !important;
+        width: 100% !important;
+        object-fit: cover;
+     }
+
+}
+@media (max-width:780px) and (min-width:550px){ 
+    .trade-directory>div:nth-child(1){ 
+        width: 100%;
+    }
+    .trade-directory>div:nth-child(2){ 
+        width: 100%;
+    }
+    .trade-directory .main-cards .flex .card{ 
+        width: 47% !important;
+        height: 50vw;
+        margin: 0 2vw 100px 0;
+    }
+    .trade-directory .main-cards .flex .logo{ 
+        height: 50vw;
+    }
+    .project-page .logo img{
+        height: 50vw !important;
+        width: 100% !important;
+        object-fit: cover;
+     }
+
+}
+@media (max-width:550px){ 
+    .trade-directory>div:nth-child(1){ 
+        width: 100%;
+    }
+    .trade-directory>div:nth-child(2){ 
+        width: 100%;
+    }
+    .trade-directory .main-cards .flex .card{ 
+        width: 100% !important;
+        height: 100vw;
+        margin: 0 2vw 15vw 0;
+    }
+    .trade-directory .main-cards .flex .logo{ 
+        height: 100vw;
+    }
+    .project-page .logo img{
+        height: 100vw !important;
+        width: 100% !important;
+        object-fit: cover;
+     }
+
+}
+@media (max-width: 1400px) and (min-width:1100px) {
+    .trade-directory .main-cards .flex .card{ 
+        width: 30%;
+        height: 30vw;
+        margin: 0 2vw 100px 0;
+    }
+    .trade-directory .main-cards .flex .logo{ 
+        height: 30vw;
+    }
+    .project-page .logo img{
+        height: 30vw !important;
+        width: 100% !important;
+        object-fit: cover;
+     }
+}
+
+
+
+@media (max-width: 350px){ 
+    .trade-directory .main-cards .flex .card{ 
+        width: 30%;
+        height: 100vw;
+        margin: 0 2vw 100px 0;
+    }
+    .trade-directory .main-cards .flex .logo{ 
+        height: 100vw;
+    }
+    .project-page .logo img{
+        height: 100vw !important;
+        width: 100% !important;
+        object-fit: cover;
+     }
+    
+}
+.trade-directory .main-cards .flex .card .link .website-link{ 
+    text-decoration: none;
+    padding: 5px 10px;
+    background-color: white;
+    border-radius: 20px;
+   position: relative;
+    top: -40px;
+    left: 10px;
+    opacity:0;
+    transition: 800ms;
+    transition-timing-function: ease-in-out;
+    cursor: pointer;
+}
+.trade-directory .main-cards .flex .card .link .website-link:hover{ 
+    text-decoration: underline;
+}
+
+.trade-directory .main-cards .flex .design-board-save-btn-container{ 
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    opacity: 0;
+    transition: 800ms;
+    transition-timing-function: ease-in-out;
+}
+
+
+
+.trade-directory .main-cards .flex .title{ 
+   
+    cursor: pointer;
+}
+.trade-directory .main-cards .flex .title:hover{ 
+text-decoration: underline;
+}
+
+
+
+/*styling for index.php */ 
+.index-page .gd-badge-meta{ 
+    display: none;
+}
+.index-page .geodir-post-content-container { 
+    display: none;
+}
+.index-page .geodir-loop-actions-container { 
+    display: none;
+}
+.index-page .geodir-notifications { 
+    display:  none;
+}
+
+/* trade diretory sidebar */
+.trade-directory .sidebar>div{
+    margin: 7px 0 30px 0;
+}
+.trade-directory .sidebar .title{
+    position: relative;
+    cursor: pointer;
+}
+.trade-directory .sidebar .title i{
+    position: absolute;
+    right: 0;
+    top: 13px;
+}
+.trade-directory .sidebar h2{
+    position: relative;
+
+}
+.trade-directory .sidebar h2::after{
+        position: absolute;
+        content: '';
+        height: 1px;
+		  /* adjust this to move up and down. you may have to adjust the line height of the paragraph if you move it down a lot. */
+        bottom: -7px; 
+		left: 0;
+        right: 0;
+		width: 100%;
+		background: #EFEAE5;
+}
+
+.trade-directory .sidebar .facetwp-facet{
+    margin: 20px 0 0 0;
+    display: none;
+}
+.trade-directory .sidebar .facetwp-radio{
+    margin: 0 0 15px 0;
+    color: #484848;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300 !important;
+    line-height: 1.5em;
+}
+.trade-directory .sidebar .facetwp-radio:hover{
+    color: rgb(152, 152, 152) !important;
+}
+.trade-directory .sidebar .facetwp-radio:hover .facetwp-counter{
+    color: rgb(152, 152, 152) !important;
+}
+
+.trade-directory .sidebar .professionals .facetwp-counter{
+    display: none !important;
+}
+/* chang the size of the checkboxes */
+
+ /* hide filters in mobile */
+
+
+
+/* refine button */
+.trade-directory .refine-button .button{
+    display: inline;
+    letter-spacing: 1px !important;
+}
+.trade-directory .refine-button .button i{
+    display: inline;
+}
+/* sidebar for mobile */
+.trade-directory .sidebar .close-icon{
+    display: none;
+}
+.trade-directory .refine-button{
+    display: none;
+    margin: 20px 0;
+}
+
+@media(max-width:1100px){
+
+    .trade-directory .sidebar{
+        padding: 50px 20px;
+        position: fixed;
+        width: 100%;
+        height: auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow-x: scroll;
+        display: none;
+        z-index: 10000; 
+        background: rgba(255, 255, 255,1);
+    }
+    .trade-directory .sidebar .close-icon{
+        display: block;
+    }
+    .trade-directory .refine-button{
+        display: block;
+    }
+    
+}
+
+
+/* typewriter effect css */
+.trade-directory-hero-section h1 {
+    margin-top: 5px !important;
+  }
+  
+  .trade-directory-hero-section span {
+    border-right: .05em solid;
+    animation: caret 1s steps(1) infinite;
+  }
+  
+  @keyframes caret {
+    50% {
+      border-color: transparent;
+    }
+  }
+
+  /* hero section  */
+.trade-directory-hero-section {
+    width: 100%;
+    height: 300px;
+    justify-content: flex-start;
+    align-items: flex-end;
+    display: flex;
+    padding: 20px 0;
+}

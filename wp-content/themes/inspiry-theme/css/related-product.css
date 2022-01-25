@@ -1,0 +1,38 @@
+.bc-single-product__related { 
+    margin-top: 50px !important;
+}
+.bc-product-card--related .bc-product__title-link{ 
+    font-size: 20px !important;
+    font-family: 'playfair display', serif;
+}
+.bc-product-card--related .bc-product__brand{ 
+    font-size: 16px !important;
+    font-weight: 400;
+}
+.related-product-container .margin-elements{ 
+    margin: 0;
+}
+.related-product-container .lay-buy{ 
+    display: none;
+}
+.related-product-container{ 
+    padding: 0;
+}
+
+.bc-single-product__related h4{ 
+    display: none;
+}
+.bc-single-product__related .bc-product__pricing--api.bc-product__pricing--visible{ 
+    font-size: 20px;
+    margin-top: 0;
+}
+.bc-single-product__related .bc-product__meta {
+    padding: 25px 0 0;
+   
+}
+
+.bc-single-product__section-title--related{ 
+    text-align: center;
+}
+
+

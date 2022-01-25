@@ -1,0 +1,40 @@
+.bc-cart-item__remove-button {
+  padding: 5px 10px;
+}
+
+.bc-cart-actions button.bc-btn {
+  background-color: #303030 !important;
+  margin-top: 20px;
+}
+.bc-cart-subtotal {
+  color: #303030;
+}
+.bc-cart-item__remove-button {
+  cursor: pointer;
+}
+button {
+  font-family: var(--playfairDisplay) !important;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+.bc-cart-item-meta {
+  margin-left: 10px !important;
+}
+.bc-cart-item__product-brand {
+  font-weight: 400 !important;
+}
+.bc-cart-item__product-title a {
+  font-family: var(--playfairDisplay) !important;
+}
+.bc-cart-item-total-price,
+.bc-cart-subtotal__amount {
+  font-family: "work-sans", sans-serif;
+  font-weight: 500;
+}
+
+.woocommerce-MyAccount-orders {
+  max-width: 500px;
+}
+.woocommerce-MyAccount-orders tr {
+  padding: 10px !important;
+}

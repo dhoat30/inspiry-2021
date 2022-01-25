@@ -1,0 +1,33 @@
+.register-page{ 
+    width: 90%;
+    max-width: 900px;
+    margin: 50px auto 0 auto;
+    font-family: 'work-sans', sans-serif !important;
+}
+
+#buddypress #submit{ 
+    background: #F8F7F3;
+    color: white;
+    padding: 10px 20px;
+}
+#buddypress .wp-hide-pw{ 
+
+    padding: 10px  10px !important;
+    border: none
+}
+
+.buddypress-wrap .bp-feedback.info .bp-icon:before{ 
+    background-color: #303030;
+}
+.buddypress-wrap .bp-feedback.info .bp-icon{ 
+    background-color: #303030;
+
+}
+
+#buddypress h2, legend{ 
+    font-family: 'work-sans', sans-serif;
+}
+
+.buddypress-wrap .standard-form input[required]:invalid, .buddypress-wrap .standard-form select[required]:invalid, .buddypress-wrap .standard-form textarea[required]:invalid {
+    border-color: #303030;
+}

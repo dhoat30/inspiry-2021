@@ -1,0 +1,107 @@
+/*container */ 
+.geodir-category-list-view{ 
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+}
+.geodir-category-list-view>li{ 
+   /* margin: 25px 30px 25px 30px !important;*/
+    display: block;
+    
+}
+@media (max-width: 1000px){ 
+   
+    body ul.geodir-category-list-view.geodir-gridview.gridview_onehalf>li{
+        width: 90% !important;
+        
+    }
+}
+/*filter and cards*/ 
+.geo-directory-archive-flex{ 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.geo-directory-archive-flex .filters{ 
+    width: 20%;
+    margin-top: 40px;
+}
+.geo-directory-archive-flex .cards{ 
+    width: 80%;
+}
+@media only screen and (max-width: 800px){
+body ul.geodir-category-list-view>li:nth-child(2n+0) {
+    margin-left: 0 !important;
+}}
+@media (max-width: 1000px){ 
+   
+    body ul.geodir-category-list-view.geodir-gridview.gridview_onehalf>li{
+        width: 100% !important;
+  
+    }
+    .geodir-category-list-view{ 
+        display: flex;
+        flex-wrap: wrap;
+     }
+    .geodir-category-list-view>li{ 
+        margin: 25px 0 25px 0 !important;
+    }
+    .geo-directory-archive-flex .filters{ 
+        width: 90%;
+        margin-top: 40px;
+    }
+    .geo-directory-archive-flex .cards{ 
+        width: 100%;
+    }
+}
+/*main Styles*/ 
+
+.geodir-entry-title a:hover{ 
+    text-decoration: underline;
+}
+.geodir-field-business_hours>span {
+    color: #303030;
+    font-size: 15px; 
+     font-family: 'Roboto', sans-serif !important;
+
+}
+
+.gd-list-rating-link{ 
+    color: #303030;
+}
+
+.geodir-field-address>span{ 
+    font-size: 15px !important;
+     font-family: 'Roboto', sans-serif !important;
+    letter-spacing: 1px;
+}
+.gd-read-more{ 
+    color: #303030;
+}
+
+/*post content*/ 
+.geodir-field-post_content{ 
+    font-family: 'work sans', sans-serif;
+}
+/*save to board styling*/ 
+.geodir-list-save-container {
+    margin: 10px 0;
+}
+
+/*meta new*/ 
+.gd-badge-meta-new{ 
+    display: none;
+}
+
+/*card spacing*/ 
+body ul.geodir-category-list-view.geodir-gridview.gridview_onethird>li {
+    margin-bottom: 50px;
+}
+
+/*pagination*/ 
+.geodir-pagination .page-numbers{ 
+    color: #303030; 
+}
+.geodir-pagination .current{ 
+    color: #525659;
+}
