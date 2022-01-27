@@ -101,7 +101,7 @@
   </div>
 
   <div class="footer-img">
-    <img src="<?php echo get_site_url();?>/wp-content/uploads/2020/11/Inspiry_Slogan-transparent.png" alt="Slogan">
+    <!-- <img src="<?php //echo get_site_url();?>/wp-content/uploads/2020/11/Inspiry_Slogan-transparent.png" alt="Slogan"> -->
   </div>
   <div class="copyright-container row-container light-grey">
     <div>© Copyright 2019 Inspiry NZ. All rights reserved. <a href="https://webduel.co.nz" rel="nofollow"

@@ -196,7 +196,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="logo-container">
                 <?php 
                   $logoImage = 0; 
-                   if(get_site_url() === "http://localhost/inspiry"){
+                   if(get_site_url() === "http://localhost/inspirynew"){
                     $logoImage = get_field("logo", 452530);
                    }
                    else{ 

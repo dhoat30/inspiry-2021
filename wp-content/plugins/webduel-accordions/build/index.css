@@ -1,0 +1,25 @@
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/index.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************/
+.accordion-block-container {
+  padding: 20px;
+  border: 2px;
+  border: 1px solid #d6d6d6;
+  background-color: #f1f1f1;
+}
+
+.attention-delete {
+  margin-bottom: 20px !important;
+  padding: 0 !important;
+  color: #ff0000 !important;
+}
+.attention-delete:hover {
+  color: #c20000 !important;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #d6d6d6 !important;
+}
+
+/*# sourceMappingURL=index.css.map*/
