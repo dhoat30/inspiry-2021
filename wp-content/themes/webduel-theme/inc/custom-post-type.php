@@ -267,6 +267,25 @@ register_post_type("trade-professionals", array(
       "menu_icon" => "dashicons-table-row-after"
    )
    ); 
+
+
+   //Customer Services
+   register_post_type("customer_service", array(
+      "supports" => array("title", "editor"), 
+      "public" => true, 
+      "show_ui" => true, 
+      "hierarchical" => true,
+      "show_in_rest"=> true, 
+      "labels" => array(
+         "name" => "Customer Service", 
+         "add_new_item" => "Add New Customer Service Post", 
+         "edit_item" => "Edit Customer Service Post", 
+         "all_items" => "All Customer Service Posts", 
+         "singular_name" => "Customer Service Post"
+   ), 
+      "menu_icon" => "dashicons-editor-alignleft"
+   )
+   ); 
   
 }
 

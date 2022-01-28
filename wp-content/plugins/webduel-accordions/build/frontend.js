@@ -132,14 +132,46 @@ __webpack_require__.r(__webpack_exports__);
 
 const divsToUpdate = document.querySelectorAll('.webduel-accordion-update-me');
 divsToUpdate.forEach(div => {
-  react_dom__WEBPACK_IMPORTED_MODULE_3___default().render((0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(Accordion, null), div);
+  const data = JSON.parse(div.querySelector("pre").innerHTML);
+  react_dom__WEBPACK_IMPORTED_MODULE_3___default().render((0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(Accordion, {
+    faqArray: data.faqObject
+  }), div);
   div.classList.remove('webduel-accordion-update-me');
 });
 
-function Accordion() {
+function Accordion(_ref) {
+  let {
+    faqArray
+  } = _ref;
+  const [selected, setSelected] = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(null);
+
+  const toggle = i => {
+    if (selected === i) {
+      return setSelected(null);
+    }
+
+    setSelected(i);
+  };
+
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "accordion-frontend"
-  }, "Hello from react");
+  }, faqArray.map((item, index) => {
+    console.log(item);
+    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+      key: index,
+      className: "item-container"
+    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+      className: "question-container",
+      onClick: () => toggle(index)
+    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h2", null, item.question, " "), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h2", {
+      className: "icon"
+    }, selected === index ? "–" : "+")), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h3", {
+      className: selected === index ? 'answer show' : 'answer',
+      dangerouslySetInnerHTML: {
+        __html: item.answer
+      }
+    }));
+  }));
 }
 }();
 /******/ })()

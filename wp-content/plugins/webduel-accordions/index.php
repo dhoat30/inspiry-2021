@@ -35,7 +35,7 @@ class WebAccordion {
     }
     ob_start(); ?> 
         <!-- we will use the below div to add content using React render function -->
-        <div class="webduel-accordion-update-me"></div>
+        <div class="webduel-accordion-update-me"><pre style="display: none" ><?php echo wp_json_encode($attributes);?></pre></div>
     <?php return ob_get_clean(); 
   }
 }
