@@ -122,25 +122,11 @@ wp.blocks.registerBlockType("ourplugin/webduel-accordion", {
   icon: "smiley",
   category: "common",
   attributes: {
-    question: {
-      type: "array",
-      default: ['how', 'what', 'why']
-    },
-    answer: {
-      type: "array",
-      default: ['good', 'this', 'no']
-    },
     faqObject: {
       type: "array",
       default: [{
-        question: 'how',
-        answer: "I am good"
-      }, {
-        question: 'what',
-        answer: "This is"
-      }, {
-        question: 'why',
-        answer: "no way"
+        question: '',
+        answer: ""
       }]
     }
   },

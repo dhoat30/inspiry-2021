@@ -12,11 +12,7 @@
 .bc-cart-item__remove-button {
   cursor: pointer;
 }
-button {
-  font-family: var(--playfairDisplay) !important;
-  letter-spacing: 1px;
-  cursor: pointer;
-}
+
 .bc-cart-item-meta {
   margin-left: 10px !important;
 }

@@ -11,7 +11,8 @@
           "footer-help-info" => "Footer Help & info", 
           "footer-ideas-inspiration" => "Footer Ideas & Inspiration", 
           "footer-store" => "Footer Store", 
-          "footer-ways-to-shop" => "Footer Ways To Shop"
+          "footer-ways-to-shop" => "Footer Ways To Shop",
+          "customer-service-sidebar" => "Customer Service Sidebar"
        )
        );  
 

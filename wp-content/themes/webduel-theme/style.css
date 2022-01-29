@@ -38,40 +38,12 @@
 @import "css/cart.css";
 @import "css/login-page.css";
 
-/*design boards */
-
 /*pages */
 
 @import "css/page.css";
 
-/*geo directroy styling*/
-
-@import "css/trade-directory/add-listing.css";
-@import "css/trade-directory/save.css";
-@import "css/trade-directory/gd-page-location.css";
-@import "css/trade-directory/archive-items.css";
-@import "css/trade-directory/detail-page.css";
-@import "css/trade-directory/gd-project-detail.css";
-@import "css/trade-directory/project-archive-gd.css";
-@import "css/trade-directory/geo-checkout.css";
-@import "css/trade-directory/inspiry-trade.css";
-@import "css/trade-directory/trade-proffesional-page.css";
-
-/*buddypress */
-
-@import "css/trade-directory/buddypress-registration.css";
-@import "css/trade-directory/profile-buddypress.css";
-
 /*slider */
-
 @import "css/slider.css";
-
-/*board post type*/
-
-@import "css/trade-directory/single-board.css";
-@import "css/trade-directory/board-archive-page.css";
-@import "css/trade-directory/save-baord.css";
-@import "css/trade-directory/image-upload.css";
 
 /*footer*/
 @import "css/contact.css";
@@ -85,6 +57,10 @@
 @import "css/modal/modal.css";
 
 @import "css/inspiry-specials.css";
+
+/* customer service css  */
+@import "css/customer-service/customer-service.css";
+@import "css/customer-service/form.css";
 
 :root {
   --letterSpacing: 0.04rem;
@@ -107,6 +83,8 @@
   /* new styling  */
   --mediumSize: 1rem;
   --paragraphSize: 0.8rem;
+  --columnSize: 1.3rem;
+  --rowSize: 1.9rem;
 
   /* font weight */
   --regular: 400;
@@ -341,7 +319,19 @@ textarea::placeholder {
 .text-decoration-none {
   text-decoration: none;
 }
-
+/* new buttons */
+.primary-button {
+  line-height: 1.3em;
+  padding: 7px 30px 7px 30px !important;
+  border: 1px solid #303030;
+  cursor: pointer;
+  font-weight: var(--regular);
+  border-radius: 0 !important;
+  border: none;
+  background: var(--black);
+  color: white;
+  text-transform: uppercase;
+}
 .button {
   letter-spacing: 0.2em;
   line-height: 1.3em;

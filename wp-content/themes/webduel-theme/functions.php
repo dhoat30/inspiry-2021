@@ -45,6 +45,9 @@ require get_theme_file_path('/inc/woocommerce/single-product.php');
 require get_theme_file_path('/inc/api-routes/cart-routes.php');
 require get_theme_file_path('/inc/api-routes/mailchimp-route.php');
 
+// forms 
+require get_theme_file_path('/inc/customer-service/contact-form.php'); 
+
  //enqueue scripts
  function inspiry_scripts(){ 
    wp_enqueue_script("jQuery");
@@ -55,9 +58,9 @@ require get_theme_file_path('/inc/api-routes/mailchimp-route.php');
       wp_enqueue_script('main', 'http://localhost:3000/bundled.js',  array( 'jquery' ), '1.0', true);
     } else {
       wp_enqueue_script('our-vendors-js', get_theme_file_uri('/bundled-assets/vendors~scripts.fa583623385eedc86539.js'),  array( 'jquery' ), '1.0', true);
-      wp_enqueue_script('main', get_theme_file_uri('/bundled-assets/scripts.49741dbb54c51c729c67.js'), NULL, '1.0', true);
-      wp_enqueue_style('our-main-styles', get_theme_file_uri('/bundled-assets/styles.49741dbb54c51c729c67.css'));      
-      wp_enqueue_style('our-vendor-styles', get_theme_file_uri('/bundled-assets/styles.49741dbb54c51c729c67.css'));
+      wp_enqueue_script('main', get_theme_file_uri('/bundled-assets/scripts.c6c3ed67bb5c1e87474b.js'), NULL, '1.0', true);
+      wp_enqueue_style('our-main-styles', get_theme_file_uri('/bundled-assets/styles.c6c3ed67bb5c1e87474b.css'));      
+      wp_enqueue_style('our-vendor-styles', get_theme_file_uri('/bundled-assets/styles.c6c3ed67bb5c1e87474b.css'));
     }
     
     wp_localize_script("main", "inspiryData", array(

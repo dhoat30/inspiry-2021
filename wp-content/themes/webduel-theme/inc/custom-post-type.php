@@ -270,12 +270,13 @@ register_post_type("trade-professionals", array(
 
 
    //Customer Services
-   register_post_type("customer_service", array(
+   register_post_type("customer-service", array(
       "supports" => array("title", "editor"), 
       "public" => true, 
       "show_ui" => true, 
       "hierarchical" => true,
       "show_in_rest"=> true, 
+      'has_archive'=> true, 
       "labels" => array(
          "name" => "Customer Service", 
          "add_new_item" => "Add New Customer Service Post", 

@@ -1,0 +1,98 @@
+.customer-service-page {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+/* flex */
+.customer-service-page .container {
+  justify-content: space-between;
+  display: flex;
+  margin: 50px 0;
+}
+
+/* sidebar */
+.customer-service-page .sidebar {
+  max-width: 220px;
+  width: 100%;
+}
+.customer-service-page .sidebar .sidebar-title {
+  font-size: var(--columnSize);
+  font-weight: var(--regular);
+  position: relative;
+  margin-bottom: 10px;
+}
+.customer-service-page .sidebar .sidebar-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--beige);
+}
+
+#menu-customer-service-sidebar-menu {
+  width: 100%;
+  margin: 30px 0 0 0;
+  padding-left: 10px;
+}
+#menu-customer-service-sidebar-menu li {
+  padding: 10px 0;
+}
+#menu-customer-service-sidebar-menu a {
+  text-decoration: none;
+}
+#menu-customer-service-sidebar-menu a span {
+  font-size: var(--mediumSize) !important;
+  font-weight: var(--regular);
+}
+#menu-customer-service-sidebar-menu .current-menu-parent > a {
+  font-weight: 800;
+}
+
+#menu-customer-service-sidebar-menu .current-menu-item {
+  font-weight: 800;
+  position: relative;
+}
+#menu-customer-service-sidebar-menu .current-menu-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -10px;
+  width: 2px;
+  height: 100%;
+  background-color: var(--darkGrey);
+}
+#menu-customer-service-sidebar-menu .sub-menu {
+  display: none;
+  margin-left: 10px;
+}
+#menu-customer-service-sidebar-menu .menu-item-has-children {
+  font-weight: 300;
+}
+#menu-customer-service-sidebar-menu .menu-item-has-children a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.customer-service-page .sidebar ul {
+  list-style-type: none;
+}
+/* main content */
+.customer-service-page .main-container {
+  width: 100%;
+  margin-left: 50px;
+}
+
+.customer-service-page .main-container .title {
+  font-size: var(--rowSize);
+  font-weight: var(--regular);
+  color: var(--darkGrey);
+  text-transform: uppercase;
+  letter-spacing: 0.06rem;
+  line-height: 2rem;
+}
+
+.customer-service-page .main-container .content {
+  margin-top: 30px;
+}

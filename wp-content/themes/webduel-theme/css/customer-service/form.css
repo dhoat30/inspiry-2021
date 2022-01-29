@@ -1,0 +1,33 @@
+#contact-form {
+  width: 100%;
+  max-width: 450px;
+}
+#contact-form .flex {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+#contact-form .flex .label-container {
+  width: 95%;
+}
+#contact-form input {
+  width: 100%;
+  height: 40px;
+  border-style: none;
+  border: 1px solid var(--darkGrey);
+}
+#contact-form .label-container {
+  margin-bottom: 20px;
+  width: 100%;
+}
+#contact-form .label-container label {
+  margin-bottom: 5px;
+  display: block;
+  font-size: var(--mediumSize);
+}
+
+/* text area */
+#contact-form textarea {
+  width: 100%;
+  height: 135px;
+}

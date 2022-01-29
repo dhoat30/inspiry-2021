@@ -55,6 +55,9 @@ import Search from './modules/Search'
 // facet filter
 import FacetFilter from './modules/FacetFilter/FacetFilter'
 
+// customer service 
+import CustomerServiceMenu from './modules/CustomerService/CustomerServiceMenu'
+
 window.onload = function () {
   //send request to 
   //create board function 
@@ -102,6 +105,9 @@ window.onload = function () {
 
   // facet filter 
   const facetFilter = new FacetFilter()
+
+  // customer service 
+  const customerServiceMenu = new CustomerServiceMenu()
 
   //price 
   let pricevalue = document.getElementsByClassName('bc-show-current-price');
