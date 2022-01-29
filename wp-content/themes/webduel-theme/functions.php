@@ -47,6 +47,7 @@ require get_theme_file_path('/inc/api-routes/mailchimp-route.php');
 
 // forms 
 require get_theme_file_path('/inc/customer-service/contact-form.php'); 
+require get_theme_file_path('/inc/customer-service/feedback-form.php');
 
  //enqueue scripts
  function inspiry_scripts(){ 

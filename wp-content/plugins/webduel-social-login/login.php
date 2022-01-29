@@ -160,7 +160,6 @@ function vm_login_google($redirectLink){
         }
         var_dump($userData);
     }else{
-			          
          wp_redirect(home_url(  ));
         exit;
     }

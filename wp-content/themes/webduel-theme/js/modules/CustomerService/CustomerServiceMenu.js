@@ -15,7 +15,11 @@ class CustomerServiceMenu {
 
         // find if the submenu is open and add "-" in span
         $('#menu-customer-service-sidebar-menu a[aria-current="page"]').closest('.current-menu-parent').find('a span').html("–")
+
+        // show mobile menu
+        $('.customer-service-page .sidebar-mobile-menu .secondary-button').on('click', this.showMobileNavbar)
     }
+
 
     // toggle submenu 
     toggleSubmenu(e) {
@@ -30,6 +34,12 @@ class CustomerServiceMenu {
             }
         })
 
+    }
+
+    // show mobile navbar
+    showMobileNavbar() {
+        $('.customer-service-page .sidebar-mobile-menu i').toggleClass('arrow-up')
+        $('.customer-service-page .sidebar').slideToggle()
     }
 }
 

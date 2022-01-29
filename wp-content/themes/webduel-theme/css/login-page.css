@@ -1,108 +1,115 @@
-.bc-btn--register{ 
-    color: white !important;
-    letter-spacing: 1px;
+/* login  */
+form#login {
+  display: none;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px 25px 25px 25px;
+  width: 95%;
+  z-index: 2000;
+  max-width: 400px;
+  color: #878787;
+  font-size: 11px;
+}
+form#login label {
+  font-size: 1.2rem;
+}
+form#login a {
+  font-size: 1rem;
+  font-family: var(--poppins);
 }
 
-.trade-register-button, .trade-login-btn{ 
-    background: white !important;
-    color: #303030 !important; 
-    border: 1px solid #303030;
+form#login h1 {
+  color: #333333;
+  font-size: 27px;
+  font-weight: 100;
+  text-align: center;
+  line-height: 1;
+  margin: 0 0 30px 0;
+  font-weight: 500;
 }
 
-.trade-register-button:hover{ 
-    background-color: none !important;
-    color: #525659 !important; 
-    border: 1px solid #525659 !important;
+form#login input#username,
+form#login input#password {
+  border: 1px solid #ededed;
+  border-radius: 3px 3px 3px 3px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1) inset;
+  color: #333333;
+  font-size: 15px;
+  padding: 10px 10px 10px 13px;
+  width: 100%;
+  margin: 7px 0 30px 0;
+  background-color: #f9f9f9;
 }
-.trade-login-btn:hover{ 
-    background-color: none !important;
-    color: #525659 !important; 
-    border: 1px solid #525659 !important;
+form#login .lost {
+  display: block !important;
+  margin-bottom: 20px !important;
+}
+form#login input#username:focus,
+form#login input#password:focus {
+  background-color: #fff;
+}
+form#login .flex {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  margin: 20px 0 0 0 !important;
+}
+form#login input.submit_button {
+  display: block;
+  font-size: 1rem;
+  color: #fff;
+  border: 1px solid var(--darkGrey);
+  background-color: var(--darkGrey);
+  text-shadow: 0 1px 0 var(--darkGrey);
+  padding: 9px 31px 9px 31px;
+  margin-bottom: 10px;
+  cursor: pointer;
 }
 
-/*title*/ 
-.general-page-template h1{ 
-    font-weight: 500;
-}
-.bc-account-login__register-title{ 
-    font-family: 'work-sans', sans-serif;
-    font-weight: 500;
-    font-size: 25px;
-    margin-top: 0px;
-}
-.form-content .bc-account-login__register-inner p, ul{ 
-    font-size: 15px;
-    font-weight: 300 !important;
-    margin: 5px 0;
-}
-.bc-account-login__register-list{ 
-    margin-bottom: 14px !important;
-}
-/*sign up form*/ 
-.login-overlay{ 
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90%;
-    max-width: 600px;
-    height: 90vh; 
-    max-height: 600px;
-    background-color: #F8F7F3;
-    padding: 20px 20px;
-    z-index: 2000;
-    display: none;
-}
-.login-overlay i{ 
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    font-size: 30px;
-    cursor: pointer;
-    font-weight: 100;
-    color: #303030;
-
-}
-.login-overlay i:hover{ 
-    color: #525659;
-}
-.form-content { 
-    margin-top: 40px;
-}
-#loginform label{ 
-    font-family: 'work-sans', sans-serif;
-}
-#loginform #user_login, #user_pass{ 
-    display: block !important;
-    width: 100% !important;
-    height: 40px;
+form#login a {
+  text-decoration: none;
 }
 
-
-/*regsiter Page*/ 
-#register-page #submit{ 
-    background-color: #303030 !important;
-}
-#register-page #submit:hover{ 
-    background-color: #525659 !important;
-}
-#pass-strength-result{
-    font-family: 'work-sans', sans-serif;
+form#login a.close {
+  color: #dcdcdc;
+  position: absolute;
+  right: 15px;
+  top: 15px;
 }
 
-.buddypress-wrap .register-page .layout-wrap>div{ 
-    width: 100% !important;
-}
-.register-section{ 
-    flex: 5 !important;
-}
-.register-page .signup-form .editfield {
-    margin: -7px 0 !important; 
+form#login a.lost {
+  color: #b4b2b2;
+  float: left;
+  margin: 10px 0 0 0;
 }
 
-.bc-account-login__form a{ 
-    display: block !important;
+form#login p.status {
+  text-align: center;
+  margin: -25px 0 20px 0;
+  display: none;
 }
-.bc-btn--lost-password{ 
-background-color: #303030 !important;
+
+a.login_button {
+  padding: 5px 7px 5px 7px;
+  background-color: #fff;
+  border-radius: 3px;
+  border: 1px solid #dcdcdc;
+  color: #333;
+  text-decoration: none;
+  font-size: 11px;
+}
+
+.login_overlay {
+  height: 100%;
+  width: 100%;
+  background-color: #f6f6f6;
+  opacity: 0.9;
+  position: fixed;
+  z-index: 998;
 }

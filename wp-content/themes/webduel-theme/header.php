@@ -272,10 +272,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     echo do_shortcode('[facebook-login]');
                 }
                 ?>
-
-            </div>
-
-            
+            </div>            
             <a class="close" href="">(close)</a>
             <?php wp_nonce_field( 'ajax-login-nonce', 'security' ); ?>
     </form>
