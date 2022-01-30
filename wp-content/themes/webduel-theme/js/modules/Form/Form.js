@@ -26,7 +26,7 @@ class Form {
         let filePath;
 
         if (url === 'localhost') {
-            filePath = `/inspiry-2021/${fileName}`
+            filePath = `/inspirynew/${fileName}`
         }
         else {
             filePath = `https://inspiry.co.nz/${fileName}`

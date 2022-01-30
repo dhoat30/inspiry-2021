@@ -10,7 +10,6 @@
 @import "css/woocommerce/single-product.css";
 @import "css/woocommerce/cart.css";
 @import "css/woocommerce/checkout.css";
-@import "css/woocommerce/account.css";
 @import "css/woocommerce/popup-cart.css";
 @import "css/woocommerce/wishlist.css";
 @import "css/woocommerce/facet-filter.css";
@@ -34,9 +33,7 @@
 @import "css/about-us.css";
 @import "css/general.css";
 @import "css/loader.css";
-@import "css/account.css";
 @import "css/cart.css";
-@import "css/login-page.css";
 
 /*pages */
 
@@ -62,6 +59,10 @@
 @import "css/customer-service/customer-service.css";
 @import "css/customer-service/form.css";
 
+/* account css */
+@import "css/account/login.css";
+@import "css/account/create-account.css";
+
 :root {
   --letterSpacing: 0.04rem;
   --offWhite: #f2f2f2;
@@ -79,6 +80,7 @@
   --cardBorderRadius: 16px;
   --blue: #007272;
   --red: #e60023;
+  --white: rgb(255, 255, 255);
 
   /* new styling  */
   --mediumSize: 1rem;
@@ -323,14 +325,17 @@ textarea::placeholder {
 /* new buttons */
 .primary-button {
   line-height: 1.3em;
-  padding: 7px 30px 7px 30px;
+  padding: 10px 30px 10px 30px;
   cursor: pointer;
   font-weight: var(--regular);
   border-radius: 0 !important;
   border: none;
   background: var(--black);
-  color: white;
+  color: white !important;
   text-transform: uppercase;
+  font-size: var(--paragraphSize);
+  letter-spacing: 0.05rem;
+  text-decoration: none;
 }
 .secondary-button {
   line-height: 1.3em;

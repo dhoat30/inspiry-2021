@@ -23,7 +23,7 @@ $gClient->setApplicationName("Inspiry Local and Live");
 
 
     if (strstr($_SERVER['SERVER_NAME'], 'localhost')) {
-        $gClient->setRedirectUri("http://localhost/inspiry-2021/wp-admin/admin-ajax.php?action=vm_login_google");
+        $gClient->setRedirectUri("http://localhost/inspirynew/wp-admin/admin-ajax.php?action=vm_login_google");
     }
     else{ 
         $gClient->setRedirectUri("https://inspiry.co.nz/wp-admin/admin-ajax.php?action=vm_login_google");
@@ -50,7 +50,7 @@ function vm_login_with_google(){
             padding: 7px;
             width: 100%;
             margin: 5px 0;
-            background: #efeae5; 
+           border: 1px solid var(--black); 
             font-family: "Poppins", sans-serif !important; 
 
           }
@@ -79,7 +79,7 @@ function vm_login_with_google(){
 $redirectLink = ""; 
 
 if (strstr($_SERVER['SERVER_NAME'], 'localhost')) {
-    $redirectLink = "http://localhost/inspiry-2021/products"; 
+    $redirectLink = "http://localhost/inspirynew/products"; 
 }
 else{ 
     $redirectLink = "https://inspiry.co.nz/products"; 

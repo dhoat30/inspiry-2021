@@ -22,7 +22,7 @@ class PopUpCart {
         let productID = $(e.target).attr('data-productID');
         let url = 'https://inspiry.co.nz/wp-admin/admin-ajax.php';
         if (location.hostname === "localhost" || location.hostname === "127.0.0.1") {
-            url = 'http://localhost/inspiry-2021/wp-admin/admin-ajax.php';
+            url = 'http://localhost/inspirynew/wp-admin/admin-ajax.php';
         }
 
         $.ajax({

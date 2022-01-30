@@ -1,14 +1,7 @@
 // ajax log in
 jQuery(document).ready(function ($) {
-    console.log(ajax_login_object)
     // Show the login dialog box on click
     $('a#show_login').on('click', function (e) {
-        $('body').prepend('<div class="login_overlay"></div>');
-        $('form#login').fadeIn(500);
-        $('div.login_overlay, form#login a.close').on('click', function () {
-            $('div.login_overlay').remove();
-            $('form#login').hide();
-        });
         e.preventDefault();
     });
 
@@ -36,6 +29,12 @@ jQuery(document).ready(function ($) {
         });
         e.preventDefault();
     });
+
+    // create a user 
+    $('.create-account-page #create-account').on('submit', (e) => {
+        e.preventDefault()
+
+    })
 
     function jwtAuth(username, password) {
         let formData = {
@@ -68,7 +67,5 @@ jQuery(document).ready(function ($) {
             })
             .catch(err => console.log(err))
     }
-
-
 
 });

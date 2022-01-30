@@ -243,17 +243,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </nav>
         </div>
                  
-        <div class="login-overlay"> 
-            <i class="fal fa-times"></i>   
-            <div class="form-content">
-                
-            </div>      
-        </div>
+    
         <!-- login form  -->
     
 
     </section>
-
+<!-- 
     <form id="login" action="login" method="post">
             <h1>Site Login</h1>
             <p class="status"></p>
@@ -275,7 +270,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>            
             <a class="close" href="">(close)</a>
             <?php wp_nonce_field( 'ajax-login-nonce', 'security' ); ?>
-    </form>
+    </form> -->
 
 <?php 
 

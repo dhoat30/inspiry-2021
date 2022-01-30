@@ -57,7 +57,7 @@
 /* vertical border */
 .vertical-border {
   height: auto;
-  width: 2px;
+  width: 5px;
   background-color: var(--beige);
 }
 
