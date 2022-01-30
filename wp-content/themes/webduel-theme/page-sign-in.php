@@ -10,9 +10,9 @@ get_header();
                 <form id="login" action="login" method="post">
                         <p class="status"></p>
                         <label for="username">Username*</label>
-                        <input id="username" type="text" name="username">
+                        <input id="username" type="text" name="username" required>
                         <label for="password">Password*</label>
-                        <input id="password" type="password" name="password">
+                        <input id="password" type="password" name="password" required>
                         
                         <div class="flex">
                             <input class="primary-button" type="submit" value="SIGN IN" name="submit">

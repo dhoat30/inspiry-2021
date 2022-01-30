@@ -111,3 +111,10 @@
 .create-account-page #create-account .fbBtn {
   margin-top: 10px;
 }
+
+.create-account-page p.status {
+  margin: -20px 0 10px 0;
+  display: none;
+  font-size: var(--paragraphSize);
+  color: var(--red);
+}

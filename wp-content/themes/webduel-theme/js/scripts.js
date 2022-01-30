@@ -17,7 +17,6 @@ import TradeNav from './modules/TradeNav';
 import DesignBoard from './modules/DesignBoard';
 import DesignBoardSaveBtn from './modules/DesignBoardSaveBtn';
 import FacetWp from './modules/FacetWp';
-//import LogIn from './modules/LogIn';
 import Overlay from './modules/overlay';
 import LocationPage from './modules/LocationPage';
 import TopNav from './modules/TopNav';
@@ -45,6 +44,7 @@ import CartModal from './modules/CartModal/CartModal'
 
 // auth
 import Login from './modules/Auth/Login'
+import CreateAccount from './modules/Auth/CreateAccount';
 
 // windcave checkout validation 
 import CheckoutInputValidation from './modules/Windcave/CheckoutInputValidation'
@@ -99,6 +99,7 @@ window.onload = function () {
 
   // login 
   const login = new Login()
+  const createAccount = new CreateAccount()
 
   // search 
   const search = new Search()

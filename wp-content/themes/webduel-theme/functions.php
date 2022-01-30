@@ -33,7 +33,11 @@ require get_theme_file_path('/inc/order-routes.php');
 require get_theme_file_path('/inc/api-routes/email-routes.php');
 require get_theme_file_path('/inc/api-routes/trade-routes.php');
 require get_theme_file_path('/inc/api-routes/pins-routes.php');
-require get_theme_file_path('/inc/ajax-login.php');
+// auth
+require get_theme_file_path('/inc/auth/ajax-login.php');
+require get_theme_file_path('/inc/auth/create-user.php');
+require get_theme_file_path('/inc/api-routes/auth-route.php');
+
 require get_theme_file_path('/inc/api-routes/search-routes.php');
 require get_theme_file_path('/inc/api-routes/social-login-routes.php');
 require get_theme_file_path('/inc/api-routes/windcave-routes.php');
