@@ -421,3 +421,7 @@
     display: none;
   }
 }
+/* mega menu widget image  */
+.widget_media_image a {
+  padding: 0 !important;
+}

@@ -83,7 +83,7 @@
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PS7XFHN"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-  
+   
     <section class="header" >
         <div class="top-banner">
             <div class="track-order">
@@ -134,7 +134,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <?php
                         }
                         else{
-                            ?><a id="show_login" href="<?php echo get_site_url(); ?>/account-profile/" class="text-decoration-none dark-grey regular" data-root-url='<?php echo get_home_url()?>/account-profile'>
+                            $currentLink = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+
+                            ?><a id="show_login" href="<?php echo get_site_url(); ?>/sign-in?redirect-link=<?php echo $currentLink?>" class="text-decoration-none dark-grey regular" data-root-url='<?php echo get_home_url()?>/account-profile'>
                                 <i class="fas fa-user"></i>
                                 <span>Login/Register</span> 
                         </a>

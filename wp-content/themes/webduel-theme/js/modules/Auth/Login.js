@@ -7,12 +7,17 @@ class Login {
         this.events()
     }
     events() {
+
         // submit login form
         $('form#login').on('submit', this.submitLogin)
     }
     submitLogin(e) {
-        console.log("form clicked")
         e.preventDefault();
+        // get redirect link from url parameters 
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const redirectLink = urlParams.get('redirect-link')
+
         $('form#login p.status').show().text(ajax_login_object.loadingmessage);
         $.ajax({
             type: 'POST',
@@ -30,7 +35,8 @@ class Login {
                 if (data.loggedin == true) {
                     console.log("jwt auth")
                     // set auth token 
-                    const authToken = new AuthToken($('form#login #username').val(), $('form#login #password').val())
+
+                    const authToken = new AuthToken(redirectLink, $('form#login #username').val(), $('form#login #password').val())
                 }
             }
         });

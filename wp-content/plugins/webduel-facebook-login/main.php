@@ -75,7 +75,7 @@ function login_with_facebook() {
 			$data = ["email"];
 			$fullURL = $handler->getLoginURL($redirect_to, $data);
 			return $btnContent.'
-				<a class="fbBtn" href="'. $fullURL .'"><svg aria-hidden="true" class="svg-icon iconFacebook" width="18" height="18" viewBox="0 0 18 18"><path d="M3 1a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H3Zm6.55 16v-6.2H7.46V8.4h2.09V6.61c0-2.07 1.26-3.2 3.1-3.2.88 0 1.64.07 1.87.1v2.16h-1.29c-1 0-1.19.48-1.19 1.18V8.4h2.39l-.31 2.42h-2.08V17h-2.5Z" fill="#4167B2"></path></svg> Login With Facebook</a>
+				<a class="fbBtn" id="fbBtn" href="'. $fullURL .'"><svg aria-hidden="true" class="svg-icon iconFacebook" width="18" height="18" viewBox="0 0 18 18"><path d="M3 1a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H3Zm6.55 16v-6.2H7.46V8.4h2.09V6.61c0-2.07 1.26-3.2 3.1-3.2.88 0 1.64.07 1.87.1v2.16h-1.29c-1 0-1.19.48-1.19 1.18V8.4h2.39l-.31 2.42h-2.08V17h-2.5Z" fill="#4167B2"></path></svg> Login With Facebook</a>
 			';
 		}
 	}else{
@@ -106,7 +106,7 @@ function webduel_facebook_login(){
 	}
 
 	if(!$accessToken){
-		wp_redirect( home_url() );
+		wp_redirect( $_GET['redirect-link'] );
 		exit;
 	}
 
@@ -149,7 +149,7 @@ function webduel_facebook_login(){
 			wp_set_auth_cookie($new_user_id, true);
 			
 			// send the newly created user to the home page after login
-			wp_redirect(home_url()); exit;
+			wp_redirect($_GET['redirect-link']); exit;
 		}
 	}else{
 		//if user already registered than we are just loggin in the user
@@ -164,12 +164,13 @@ function webduel_facebook_login(){
 		do_action('wp_login', $user->user_login, $user->user_email);
 		wp_set_current_user($user->ID);
 		wp_set_auth_cookie($user->ID, true);
-		wp_redirect(home_url()); exit;
+		wp_redirect($_GET['redirect-link']); exit;
 	}
 }
 
 // get jwt auth token 
 function jwtTokenFbLogin($username, $password){
+	unset($_COOKIE['inpiryAuthToken']);
 	// curl request for jwt token 
 	$curl = curl_init();
 	$postData = [ "username"=> $username, 
@@ -214,3 +215,12 @@ add_action( 'admin_init', 'add_ajax_actions' );
  function wd_fb_login_button(){ 
 	 echo do_shortcode('[facebook-login]');
  }
+
+ //   remove inspiry cookies to avoid re login conflict
+ function cookie_script_facebook_webduel(){
+    wp_register_script('cookieScript', plugin_dir_url(__FILE__) . 'index.js', array('jquery'), '1.0.0', true);
+    wp_enqueue_script('cookieScript');
+    }
+
+    add_action('wp_enqueue_scripts', 'cookie_script_facebook_webduel');
+

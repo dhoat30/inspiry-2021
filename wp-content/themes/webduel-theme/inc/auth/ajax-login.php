@@ -3,12 +3,11 @@
 //   ajax login 
 function ajax_login_init(){
 
-    wp_register_script('ajax-login-script', get_template_directory_uri() . '/js/ajax-login-script.js', array('jquery') ); 
+    wp_register_script('ajax-login-script', get_template_directory_uri() . '/js/scripts.js', array('jquery') ); 
     wp_enqueue_script('ajax-login-script');
   
     wp_localize_script( 'ajax-login-script', 'ajax_login_object', array( 
         'ajaxurl' => admin_url( 'admin-ajax.php' ),
-        'redirecturl' => home_url(),
         'loadingmessage' => __('Sending user info, please wait...')
     ));
   
@@ -30,14 +29,28 @@ function ajax_login_init(){
     $info['user_login'] = $_POST['username'];
     $info['user_password'] = $_POST['password'];
     $info['remember'] = true;
+    // $redirectLink = $_POST['redirectLink']; 
   
     $user_signon = wp_signon( $info, false );
     if ( is_wp_error($user_signon) ){
         echo json_encode(array('loggedin'=>false, 'message'=>__('Wrong username or password.')));
     } else {
-        echo json_encode(array('loggedin'=>true, 'message'=>__('Login successful, redirecting...')));
+        echo json_encode(array('loggedin'=>true, 'message'=>__('Sign in successful, redirecting...')));
+        // wp_redirect($redirectLink);
     }
   
     die();
   }
-  
+
+  // redirect a user to home page if logged in
+  function add_login_check()
+{
+    if (is_user_logged_in()) {
+        if (is_page('sign-in')){
+            wp_redirect(home_url());
+            exit; 
+        }
+    }
+}
+
+add_action('wp', 'add_login_check');

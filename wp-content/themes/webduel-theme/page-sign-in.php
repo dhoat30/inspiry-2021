@@ -55,7 +55,8 @@ get_header();
                     }
                     ?> 
                 </div>
-                <a class="primary-button" href='<?php echo get_field('create_account_link'); ?> '> Create Account</a>
+              
+                <a class="primary-button" href='<?php echo get_field('create_account_link'); ?>?redirect-link=<?php  print_r($_GET["redirect-link"])?>'> Create Account</a>
                 <h3 class="track-order">
                     Don't have an account?
                     <a  href='<?php echo get_field('track_order_link'); ?> '> Track Order</a>
@@ -64,4 +65,5 @@ get_header();
         </div>
     </div>
 </div>
+
 <?php get_footer();?>

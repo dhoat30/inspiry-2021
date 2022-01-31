@@ -44,7 +44,6 @@ import CartModal from './modules/CartModal/CartModal'
 
 // auth
 import Login from './modules/Auth/Login'
-import CreateAccount from './modules/Auth/CreateAccount';
 
 // windcave checkout validation 
 import CheckoutInputValidation from './modules/Windcave/CheckoutInputValidation'
@@ -99,7 +98,6 @@ window.onload = function () {
 
   // login 
   const login = new Login()
-  const createAccount = new CreateAccount()
 
   // search 
   const search = new Search()

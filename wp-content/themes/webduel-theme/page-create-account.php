@@ -41,7 +41,6 @@
                         <div class="terms-flex">
                             <div class="terms"><?php echo get_the_content();?></div>
                         </div>    
-                        <?php echo admin_url('admin-ajax.php'); ?>
                         <?php wp_nonce_field( 'ajax-login-nonce', 'security' ); ?>
                 </form>
             </div>

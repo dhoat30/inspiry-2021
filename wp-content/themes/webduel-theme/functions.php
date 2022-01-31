@@ -470,3 +470,4 @@ add_filter( 'wp_check_filetype_and_ext', function($data, $file, $filename, $mime
   }
   add_action( 'admin_head', 'fix_svg' );
 
+

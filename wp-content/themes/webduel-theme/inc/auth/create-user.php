@@ -24,7 +24,7 @@ function register_user_front_end() {
 	  	if (!is_wp_error($user_id)) {
 	        
               // get jwt token
-          jwtTokenLogin($new_user_email, $new_user_password); 
+            jwtTokenLogin($new_user_email, $new_user_password); 
             // send an email to the admin
             wp_new_user_notification($user_id);
               // log the new user in
@@ -35,7 +35,7 @@ function register_user_front_end() {
               // send the newly created user to the home page after login
               
             //   wp_redirect(home_url());
-            echo 'we have Created an account for you.';
+            echo 'We have Created an account for you.';
               exit;
 
 
@@ -61,7 +61,7 @@ function jwtTokenLogin($username, $password){
     "password"=> $password
             ];
         curl_setopt_array($curl, array(
-        CURLOPT_URL => 'https://inspiry.co.nz/wp-json/jwt-auth/v1/token',
+        CURLOPT_URL => 'http://localhost/inspirynew/wp-json/jwt-auth/v1/token',
         CURLOPT_RETURNTRANSFER => true,
         CURLOPT_ENCODING => '',
         CURLOPT_MAXREDIRS => 10,
@@ -79,7 +79,23 @@ function jwtTokenLogin($username, $password){
 
         curl_close($curl);
         $obj = json_decode($response);
-        print_r($obj->token);
+   
         // sett auth cookie 
         setcookie("inpiryAuthToken", $obj->token, time() + (86400 * 30), "/"); // 86400 = 1 day
 }
+
+
+  
+function wpb_cookies_tutorial2() { 
+    // if (is_user_logged_in()) {
+    //     if(is_page('create-account')){ 
+    //         add_action('wp_footer', function(){ 
+    //             echo '<h1>hello</h1>';
+    //         });
+    //     }
+    // }
+    unset($_COOKIE['inpiryAuthToken']); 
+        
+   
+} 
+    add_action('init', 'wpb_cookies_tutorial2');

@@ -85,9 +85,10 @@ else{
     $redirectLink = "https://inspiry.co.nz/products"; 
 }
 
-add_action('wp_ajax_vm_login_google', 
+    add_action('wp_ajax_vm_login_google', 
 		  function() use ($redirectLink){
-			  vm_login_google($redirectLink); });
+			  vm_login_google($redirectLink); 
+    });
 
 function vm_login_google($redirectLink){
 	global $wp;
@@ -135,8 +136,8 @@ function vm_login_google($redirectLink){
                 wp_set_auth_cookie($new_user_id, true);
                 
                 // send the newly created user to the home page after login
-                
-                wp_redirect(home_url());
+                // get the parameter from the url 
+                wp_redirect($_GET['redirect-link']);
 				exit;
             }
         }else{
@@ -155,7 +156,7 @@ function vm_login_google($redirectLink){
             wp_set_current_user($user->ID);
             wp_set_auth_cookie($user->ID, true);
 			
-			  wp_redirect(home_url(  ));
+                wp_redirect($_GET['redirect-link']);
 			exit;
         }
         var_dump($userData);
@@ -175,6 +176,8 @@ add_action('admin_init', 'add_google_ajax_actions');
 
 // get jwt auth token 
 function jwtTokenGoogleLogin($username, $password){
+        unset($_COOKIE['inpiryAuthToken']);
+
         // curl request for jwt token 
         $curl = curl_init();
         $postData = [ "username"=> $username, 
@@ -212,3 +215,15 @@ function jwtTokenGoogleLogin($username, $password){
    
       echo do_shortcode('[google-login]');
   }
+
+//   remove inspiry cookies to avoid re login conflict
+  function cookie_script_webduel(){
+    wp_register_script('cookieScript', plugin_dir_url(__FILE__) . 'index.js', array('jquery'), '1.0.0', true);
+    wp_enqueue_script('cookieScript');
+    }
+
+    add_action('wp_enqueue_scripts', 'cookie_script_webduel');
+
+
+  ?>
+  

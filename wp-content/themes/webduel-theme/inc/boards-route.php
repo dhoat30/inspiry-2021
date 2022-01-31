@@ -1,4 +1,10 @@
 <?php
+
+add_action('init', function() {
+    setcookie('inpiryAuthToken', null, strtotime('-1 day'));
+
+});
+
 //routes
 
 add_action("rest_api_init", "inspiry_board_route");
