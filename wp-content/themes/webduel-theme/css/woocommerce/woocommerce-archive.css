@@ -49,7 +49,7 @@
 }
 
 .archive .woocommerce-result-count {
-  font-family: "Poppins", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 /*title */
@@ -66,21 +66,21 @@
 .archive .woocommerce-Price-amount bdi,
 span {
   color: rgb(63, 63, 63);
-  font-family: "Poppins", sans-serif;
+  font-family: "Open Sans", sans-serif;
   line-height: 1.5em;
   font-size: 15px !important;
   font-weight: 500;
 }
 .archive ins .woocommerce-Price-amount bdi {
   color: var(--blue) !important;
-  font-family: "Poppins", sans-serif;
+  font-family: "Open Sans", sans-serif;
   line-height: 1.5em;
   font-size: 15px !important;
   font-weight: 500;
 }
 .archive ins .woocommerce-Price-amount span {
   color: var(--blue) !important;
-  font-family: "Poppins", sans-serif;
+  font-family: "Open Sans", sans-serif;
   line-height: 1.5em;
   font-size: 15px !important;
   font-weight: 500;
@@ -201,7 +201,7 @@ span {
   color: var(--blue) !important;
   display: inline-block;
   margin-left: 3px;
-  font-family: var(--roboto);
+  font-family: var(--openSans);
   font-size: 0.9rem;
   font-weight: 400;
 }
@@ -209,7 +209,7 @@ span {
   color: var(--lightGrey);
   display: inline-block;
   margin-left: 3px;
-  font-family: var(--roboto);
+  font-family: var(--openSans);
   font-size: 1.2rem;
   font-weight: 400;
 }

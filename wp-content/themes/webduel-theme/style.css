@@ -72,8 +72,7 @@
   --blue: #007272;
   --darkGrey: #474747;
   --black: #303030;
-  --poppins: "Poppins", sans-serif;
-  --roboto: "Roboto", sans-serif;
+  --openSans: "Open Sans", sans-serif;
   --playfairDisplay: "Playfair Display", serif;
   --transition: 500ms ease-in-out;
   --boxShadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px !important;
@@ -92,18 +91,20 @@
   --regular: 400;
   --light: 300;
   --medium: 500;
+  --bold: 700;
+  --blackWeight: 900;
 }
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
   color: #0b0b0b;
-  font-family: var(--roboto);
+  font-family: var(--openSans);
   scroll-behavior: smooth;
   line-height: 150%;
 }
 h3 {
-  font-family: var(--roboto) !important;
+  font-family: var(--openSans) !important;
 }
 p {
   font-family: "Poppins", sans-serif !important;
@@ -721,7 +722,7 @@ textarea::placeholder {
 }
 
 .footer-menu-row a {
-  font-family: "Poppins", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 /* lightbox for design board */
@@ -744,6 +745,3 @@ textarea::placeholder {
 .or-element {
   width: 100%;
 }
-
-
-

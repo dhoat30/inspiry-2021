@@ -43,18 +43,18 @@
 .single-product .woocommerce-Price-amount,
 bdi {
   margin: 0 !important;
-  font-family: "Poppins", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 .single-product del bdi {
   text-decoration: line-through !important;
   margin-right: 5px !important;
   color: #9f9f9f !important;
-  font-family: "Poppins", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 .single-product del bdi span {
   text-decoration: line-through !important;
   color: #9f9f9f !important;
-  font-family: "Poppins", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .single-product .price bdi {
@@ -64,7 +64,7 @@ bdi {
   font-weight: 400;
   line-height: 1.3em;
   margin-top: 20px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 .single-product .price span {
   color: rgb(63, 63, 63);
@@ -73,7 +73,7 @@ bdi {
   font-weight: 400;
   line-height: 1.3em;
   margin-top: 20px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 .single-product .price {
   display: inline-block !important;
@@ -91,7 +91,7 @@ bdi {
   font-size: 25px;
   line-height: 1.3em;
   letter-spacing: 1px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .single-product .entry-content {
@@ -167,7 +167,7 @@ p {
 .availability .days {
   color: #999;
   line-height: 1.3em;
-  font-family: "Poppins", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 .share-section {
   margin-top: 5px;

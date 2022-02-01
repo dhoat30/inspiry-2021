@@ -87,11 +87,11 @@
   font-weight: var(--regular);
 }
 #menu-customer-service-sidebar-menu .current-menu-parent > a {
-  font-weight: 800;
+  font-weight: var(--bold);
 }
 
 #menu-customer-service-sidebar-menu .current-menu-item {
-  font-weight: 800;
+  font-weight: var(--bold);
   position: relative;
 }
 #menu-customer-service-sidebar-menu .current-menu-item::before {
@@ -108,7 +108,7 @@
   margin-left: 10px;
 }
 #menu-customer-service-sidebar-menu .menu-item-has-children {
-  font-weight: 300;
+  font-weight: var(--regular);
 }
 #menu-customer-service-sidebar-menu .menu-item-has-children a {
   display: flex;

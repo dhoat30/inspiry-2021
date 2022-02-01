@@ -15,7 +15,7 @@ get_header();
                         <input id="password" type="password" name="password" required>
                         
                         <div class="flex">
-                            <input class="primary-button" type="submit" value="SIGN IN" name="submit">
+                            <button class="primary-button" type="submit">SIGN IN</button>
                             <div class="divider">Or</div>
                             <?php echo do_shortcode('[google-login]');
                             if(!is_front_page()){ 

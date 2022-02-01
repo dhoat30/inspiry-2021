@@ -93,6 +93,8 @@
 /* buttons  */
 .create-account-page #create-account .primary-button {
   margin-top: 20px;
+  display: block;
+  width: 100%;
 }
 
 /* terms */

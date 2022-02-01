@@ -46,7 +46,7 @@ function ajax_login_init(){
   function add_login_check()
 {
     if (is_user_logged_in()) {
-        if (is_page('sign-in')){
+        if (is_page('sign-in') OR is_page('create-account')){
             wp_redirect(home_url());
             exit; 
         }

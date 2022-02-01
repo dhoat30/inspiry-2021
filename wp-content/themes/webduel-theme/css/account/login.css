@@ -74,7 +74,7 @@ form#login label {
 }
 form#login a {
   font-size: 1rem;
-  font-family: var(--poppins);
+  font-family: var(--openSans);
 }
 .login-page .divider {
   font-size: var(--paragraphSize);
@@ -90,6 +90,7 @@ form#login input#password {
   height: 40px;
   width: 100%;
   margin: 3px 0 15px 0;
+  padding: 0 5px;
 }
 form#login .lost {
   display: block !important;
@@ -131,6 +132,9 @@ form#login input.submit_button {
   padding: 9px 31px 9px 31px;
   margin-bottom: 10px;
   cursor: pointer;
+}
+form#login .primary-button {
+  width: 100%;
 }
 
 form#login a {

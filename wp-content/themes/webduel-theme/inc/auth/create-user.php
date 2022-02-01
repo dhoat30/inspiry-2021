@@ -9,6 +9,7 @@ function register_user_front_end() {
       $userLastName = sanitize_text_field($_POST['lastName']);
       $newsletter = sanitize_text_field($_POST['subscribeNewsletter']); 
 
+
 	  $user_data = array(
 	      'user_login' => $new_user_name,
 	      'user_email' => $new_user_email,
@@ -33,20 +34,19 @@ function register_user_front_end() {
               wp_set_auth_cookie($user_id, true);
               
               // send the newly created user to the home page after login
-              
-            //   wp_redirect(home_url());
-            echo 'We have Created an account for you.';
+              echo json_encode(array('created'=>true, 'message'=>__('We have Created an account for you.')));
+       
               exit;
-
 
 	  	} else {
 	    	if (isset($user_id->errors['empty_user_login'])) {
 	          $notice_key = 'User Name and Email are mandatory';
-	          echo $notice_key;
+	          echo json_encode(array('created'=>false, 'message'=>__($notice_key)));
 	      	} elseif (isset($user_id->errors['existing_user_login'])) {
-	          echo'User name already exixts.';
+                echo json_encode(array('created'=>false, 'message'=>__('User name already exists.')));
 	      	} else {
-	          echo'Error Occured please fill up the sign up form carefully.';
+               echo json_encode(array('created'=>false, 'message'=>__('Error Occurred please fill up the sign up form carefully.')));
+	        
 	      	}
 	  	}
 	die;
@@ -55,6 +55,7 @@ function register_user_front_end() {
 
 // // get jwt auth token 
 function jwtTokenLogin($username, $password){
+    unset($_COOKIE['wpb_visit_time']); 
     // curl request for jwt token 
     $curl = curl_init();
     $postData = [ "username"=> $username, 
@@ -86,16 +87,3 @@ function jwtTokenLogin($username, $password){
 
 
   
-function wpb_cookies_tutorial2() { 
-    // if (is_user_logged_in()) {
-    //     if(is_page('create-account')){ 
-    //         add_action('wp_footer', function(){ 
-    //             echo '<h1>hello</h1>';
-    //         });
-    //     }
-    // }
-    unset($_COOKIE['inpiryAuthToken']); 
-        
-   
-} 
-    add_action('init', 'wpb_cookies_tutorial2');

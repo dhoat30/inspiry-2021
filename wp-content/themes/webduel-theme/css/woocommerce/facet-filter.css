@@ -48,14 +48,14 @@
 }
 
 .facetwp-checkbox {
-  font-family: var(--poppins);
+  font-family: var(--openSans);
   font-weight: 300;
   color: var(--lightGrey);
   padding-right: 10px;
   font-size: 0.9rem;
 }
 .facetwp-checkbox span {
-  font-family: var(--poppins);
+  font-family: var(--openSans);
   font-weight: 300;
   color: var(--lightGrey);
   font-size: 0.9rem;
@@ -85,14 +85,14 @@
   overflow: visible;
 }
 .fs-option-label {
-  font-family: var(--poppins);
+  font-family: var(--openSans);
   font-weight: 300;
   color: var(--lightGrey);
   padding-right: 10px;
   font-size: 0.9rem;
 }
 .facet-wp-container .mobile-filter-container .fs-label {
-  font-family: var(--poppins);
+  font-family: var(--openSans);
   font-weight: 300;
   color: var(--lightGrey);
   padding-right: 10px;

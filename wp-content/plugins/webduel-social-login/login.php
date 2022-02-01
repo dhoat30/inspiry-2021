@@ -218,8 +218,8 @@ function jwtTokenGoogleLogin($username, $password){
 
 //   remove inspiry cookies to avoid re login conflict
   function cookie_script_webduel(){
-    wp_register_script('cookieScript', plugin_dir_url(__FILE__) . 'index.js', array('jquery'), '1.0.0', true);
-    wp_enqueue_script('cookieScript');
+    wp_register_script('cookieScriptGoogle', plugin_dir_url(__FILE__) . 'index.js', array('jquery'), '1.0.0', true);
+    wp_enqueue_script('cookieScriptGoogle');
     }
 
     add_action('wp_enqueue_scripts', 'cookie_script_webduel');

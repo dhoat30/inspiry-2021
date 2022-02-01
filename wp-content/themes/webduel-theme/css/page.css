@@ -16,7 +16,7 @@
 .general-page-template p,
 span,
 .paragraph {
-  font-family: "Roboto", sans-serif;
+  font-family: "Open Sans", sans-serif;
   line-height: 1.5em;
 }
 .general-page-template p span {
@@ -31,7 +31,7 @@ span,
 }
 
 .general-page-template .bold {
-  font-family: "Roboto", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 600;
 }
 

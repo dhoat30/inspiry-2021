@@ -30,8 +30,8 @@
                             <label for="newsletter"> Receive the fortnightly newsletter from Inspiry.</label>
                         </div>
                         <div class="flex">
-                            <input class="primary-button" type="submit" value="CREATE ACCOUNT" name="submit">
-                            <div class="divider">Or</div>
+                            <button type="submit" class="primary-button" >CREATE ACCOUNT</button>
+                           <div class="divider">Or</div>
                             <?php echo do_shortcode('[google-login]');
                             if(!is_front_page()){ 
                                 echo do_shortcode('[facebook-login]');
@@ -50,9 +50,16 @@
 
 <script type="text/javascript">
     let $ = jQuery
+    // get redirect link from url parameters 
+    const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const redirectLink = urlParams.get('redirect-link')
+      
     $('.create-account-page #create-account').on('submit',function(e){
         e.preventDefault();
         $('.create-account-page p.status').show().text("Sending request, please wait...");
+        // add loader in a button
+        $('.create-account-page #create-account .primary-button').html('<div class="loader-icon loader--visible"></div>')
         let formData = {
             action: "register_user_front_end",
             username: $('#create-account #username').val(),
@@ -60,7 +67,8 @@
             password: $('#create-account #password').val(),
             firstName: $('#create-account #first-name').val(),
             lastName: $('#create-account #last-name').val(),
-            subscribeNewsletter: $('#create-account #newsletter').is(":checked")
+            subscribeNewsletter: $('#create-account #newsletter').is(":checked"), 
+            redirectLink: redirectLink
         }
       
         jQuery.ajax({
@@ -68,10 +76,22 @@
           url:"<?php echo admin_url('admin-ajax.php'); ?>",
           data: formData,
           success: function(results){
-            console.log(results);
-            $('.create-account-page p.status').show().text(results);
+              const resultsObj = JSON.parse(results)
+              console.log(resultsObj)
+            $('.create-account-page p.status').show().text(resultsObj.message);
+            if(resultsObj.created){ 
+                $('.create-account-page #create-account .primary-button').html('Created Account')
+                if (redirectLink) {
+                        window.location.replace(redirectLink);
+                    }
+                    else {
+                        window.location.replace("/");
+                    }
+            }
+            $('.create-account-page #create-account .primary-button').html('Create Account')
           },
           error: function(results) {
+              console.log(results)
           }
         });
       });
