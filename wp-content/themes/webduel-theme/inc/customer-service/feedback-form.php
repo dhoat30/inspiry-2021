@@ -8,7 +8,7 @@ function feedback_form_webduel(){
     ?> 
 
     <div class="contact-form-container"> 
-        <form id="contact-form" >
+        <form id="feedback-form" >
             <div class="flex" >
                 <div class="label-container">
                     <label for="First Name">First Name*</label> 

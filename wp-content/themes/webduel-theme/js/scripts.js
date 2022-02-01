@@ -56,6 +56,8 @@ import FacetFilter from './modules/FacetFilter/FacetFilter'
 
 // customer service 
 import CustomerServiceMenu from './modules/CustomerService/CustomerServiceMenu'
+import ContactForm from './modules/CustomerService/ContactForm'
+import FeedbackForm from './modules/CustomerService/FeedbackForm'
 
 window.onload = function () {
   //send request to 
@@ -107,6 +109,8 @@ window.onload = function () {
 
   // customer service 
   const customerServiceMenu = new CustomerServiceMenu()
+  const contactForm = new ContactForm()
+  const feedbackForm = new FeedbackForm()
 
   //price 
   let pricevalue = document.getElementsByClassName('bc-show-current-price');

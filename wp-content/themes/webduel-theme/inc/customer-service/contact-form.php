@@ -46,8 +46,8 @@ function contact_form_webduel(){
                     <input type="tel" name="phone-number" id="phone-number" /> 
                 </div>
                 <div class="label-container">
-                    <label for="Phone Number">Enquiry About</label> 
-                    <select name="cars" id="cars">
+                    <label for="Enquiry About">Enquiry About</label> 
+                    <select name="enquiry-term" id="enquiry-term">
                         <?php 
                          foreach ($enquiryTermsArr as $term) {
                             ?>

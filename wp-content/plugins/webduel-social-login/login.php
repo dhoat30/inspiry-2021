@@ -137,7 +137,8 @@ function vm_login_google($redirectLink){
                 
                 // send the newly created user to the home page after login
                 // get the parameter from the url 
-                wp_redirect($_GET['redirect-link']);
+                wp_redirect('https://inspiry.co.nz/shop-by-brand/');
+                // wp_redirect($_GET['redirect-link']);
 				exit;
             }
         }else{
@@ -155,13 +156,13 @@ function vm_login_google($redirectLink){
             do_action('wp_login', $user->user_login, $user->user_email);
             wp_set_current_user($user->ID);
             wp_set_auth_cookie($user->ID, true);
-			
-                wp_redirect($_GET['redirect-link']);
+            wp_redirect('https://inspiry.co.nz/shop-by-brand/');
+                // wp_redirect($_GET['redirect-link']);
 			exit;
         }
         var_dump($userData);
     }else{
-         wp_redirect(home_url(  ));
+         wp_redirect('https://inspiry.co.nz/shop-by-brand/');
         exit;
     }
 
@@ -212,18 +213,5 @@ function jwtTokenGoogleLogin($username, $password){
   add_action('woocommerce_login_form_end', "wd_google_login_button", 10); 
   add_action('woocommerce_register_form_end', "wd_google_login_button", 10); 
   function wd_google_login_button(){ 
-   
       echo do_shortcode('[google-login]');
   }
-
-//   remove inspiry cookies to avoid re login conflict
-  function cookie_script_webduel(){
-    wp_register_script('cookieScriptGoogle', plugin_dir_url(__FILE__) . 'index.js', array('jquery'), '1.0.0', true);
-    wp_enqueue_script('cookieScriptGoogle');
-    }
-
-    add_action('wp_enqueue_scripts', 'cookie_script_webduel');
-
-
-  ?>
-  

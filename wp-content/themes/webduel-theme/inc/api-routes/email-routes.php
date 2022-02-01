@@ -22,6 +22,20 @@ function email_route() {
 			"callback" => "enquiryEmail"
 		));
 
+		// contact form email
+		register_rest_route("inspiry/v1/", "contact", array(
+			"methods" => "POST",
+			"callback" => "contactEmail"
+		));
+
+		// contact form email
+		register_rest_route("inspiry/v1/", "feedback-email", array(
+			"methods" => "POST",
+			"callback" => "feedbackEmail"
+		));
+
+
+
 }
 
 // send email to trade professional 
@@ -157,4 +171,85 @@ function enquiryEmail($data) {
 		}
 
 
-?>
+// contact email 
+function contactEmail($data) {
+    $firstName = sanitize_text_field($data["firstName"]);
+	$lastName = sanitize_text_field($data["lastName"]);
+	$email = sanitize_text_field($data["email"]);
+	$phone = sanitize_text_field($data["phone"]);
+	$enquiry= sanitize_text_field($data["enquiry"]);
+	$message = sanitize_text_field($data["message"]);
+
+	$emailTo=sanitize_text_field($data["emailTo"]);
+	
+    $formName = "Contact Us Form";
+
+		$headers = 'From: '.$email;
+		$firstName = "\n First Name: $firstName";
+		$lastName = "\n Last Name: $lastName";
+		$email = "\n Email: $email";
+		$phone = " \n Phone: $phone";
+		$enquiry = "\n Enquiry: $enquiry";
+		$message = "\n Message: $message";
+
+		$msg = "Inspiry $formName \n\n $firstName $lastName $email $phone $enquiry $message";
+
+		$to = $emailTo;
+		$sub = $formName;
+		
+		// send data to mailgun 
+		sendDataToMailgun($headers, $to, $sub, $msg); 
+		
+		}
+
+		// feedback email 
+function feedbackEmail($data) {
+    $firstName = sanitize_text_field($data["firstName"]);
+	$lastName = sanitize_text_field($data["lastName"]);
+	$email = sanitize_text_field($data["email"]);
+	$phone = sanitize_text_field($data["phone"]);
+	$feedback = sanitize_text_field($data["feedback"]);
+
+	$emailTo=sanitize_text_field($data["emailTo"]);
+	
+    $formName = "Feedback Form";
+
+		$headers = 'From: '.$email;
+		$firstName = "\n First Name: $firstName";
+		$lastName = "\n Last Name: $lastName";
+		$email = "\n Email: $email";
+		$phone = " \n Phone: $phone";
+		$feedback = "\n Feedback: $feedback";
+
+		$msg = "Inspiry $formName \n\n $firstName $lastName $email $phone $feedback";
+
+		$to = $emailTo;
+		$sub = $formName;
+		
+		// send data to mailgun 
+		sendDataToMailgun($headers, $to, $sub, $msg); 
+		
+		}
+
+
+
+		// send data to mailgun 
+		function sendDataToMailgun($headers, $to, $sub, $msg){ 
+			// send email using mailgun  
+		$ch = curl_init();
+		curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
+		curl_setopt($ch, CURLOPT_USERPWD, 'api:c3c540d8a3fa918836a8291fbdbf64d6-dbdfb8ff-66cfb2a5');
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+		curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
+		curl_setopt($ch, CURLOPT_URL, 
+			'https://api.mailgun.net/v2/inspiry.co.nz/messages');
+		curl_setopt($ch, CURLOPT_POSTFIELDS, 
+			  array('from' => $headers,
+					'to' => $to,
+					'subject' => $sub,
+					'text' => $msg));
+		$result = curl_exec($ch);
+		curl_close($ch);
+		return $result;
+		}
+?>	

@@ -149,7 +149,7 @@ function webduel_facebook_login(){
 			wp_set_auth_cookie($new_user_id, true);
 			
 			// send the newly created user to the home page after login
-			wp_redirect($_GET['redirect-link']); exit;
+			wp_redirect(home_url()); exit;
 		}
 	}else{
 		//if user already registered than we are just loggin in the user
@@ -164,7 +164,10 @@ function webduel_facebook_login(){
 		do_action('wp_login', $user->user_login, $user->user_email);
 		wp_set_current_user($user->ID);
 		wp_set_auth_cookie($user->ID, true);
-		wp_redirect($_GET['redirect-link']); exit;
+		// wp_redirect($_GET['redirect-link']); 
+
+		wp_redirect(home_url()); 
+		exit;
 	}
 }
 
@@ -215,12 +218,3 @@ add_action( 'admin_init', 'add_ajax_actions' );
  function wd_fb_login_button(){ 
 	 echo do_shortcode('[facebook-login]');
  }
-
- //   remove inspiry cookies to avoid re login conflict
- function cookie_script_facebook_webduel(){
-    wp_register_script('cookieScript', plugin_dir_url(__FILE__) . 'index.js', array('jquery'), '1.0.0', true);
-    wp_enqueue_script('cookieScript');
-    }
-
-    add_action('wp_enqueue_scripts', 'cookie_script_facebook_webduel');
-

@@ -51,15 +51,7 @@ class Form {
 
         const jsonData = JSON.stringify(dataObj);
         let xhr = new XMLHttpRequest();
-        let url = window.location.hostname;
-        let filePath;
 
-        if (url === 'localhost') {
-            filePath = `/inspiry/${fileName}`
-        }
-        else {
-            filePath = `https://inspiry.co.nz/${fileName}`
-        }
 
         xhr.open('POST', filePath);
 
