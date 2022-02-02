@@ -20,6 +20,8 @@ $gClient = new Google_Client();
 $gClient->setClientId("207300494956-sh03jj7mc8i5no707hi13bejql50m25n.apps.googleusercontent.com");
 $gClient->setClientSecret("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");
 $gClient->setApplicationName("Inspiry Local and Live");
+$gClient->setState($_GET['redirect-link']);
+
 
 
     if (strstr($_SERVER['SERVER_NAME'], 'localhost')) {
@@ -34,6 +36,8 @@ $gClient->addScope("https://www.googleapis.com/auth/plus.login https://www.googl
 
 // login URL
 $login_url = $gClient->createAuthUrl();
+
+
 
 // google login 
 // generate button shortcode
@@ -51,7 +55,7 @@ function vm_login_with_google(){
             width: 100%;
             margin: 5px 0;
            border: 1px solid var(--black); 
-            font-family: "Poppins", sans-serif !important; 
+            font-family: var(--openSans); 
 
           }
           .googleBtn svg {
@@ -77,13 +81,13 @@ function vm_login_with_google(){
 // google login 
 // add ajax action
 $redirectLink = ""; 
-
-if (strstr($_SERVER['SERVER_NAME'], 'localhost')) {
-    $redirectLink = "http://localhost/inspirynew/products"; 
-}
-else{ 
-    $redirectLink = "https://inspiry.co.nz/products"; 
-}
+    if($_GET['redirect-link']){ 
+        $redirectLink = $_GET['redirect-link']; 
+    }
+    else{ 
+        $redirectLink = home_url();
+    }
+   
 
     add_action('wp_ajax_vm_login_google', 
 		  function() use ($redirectLink){
@@ -137,8 +141,7 @@ function vm_login_google($redirectLink){
                 
                 // send the newly created user to the home page after login
                 // get the parameter from the url 
-                wp_redirect('https://inspiry.co.nz/shop-by-brand/');
-                // wp_redirect($_GET['redirect-link']);
+                wp_redirect($_GET['state']);
 				exit;
             }
         }else{
@@ -156,13 +159,12 @@ function vm_login_google($redirectLink){
             do_action('wp_login', $user->user_login, $user->user_email);
             wp_set_current_user($user->ID);
             wp_set_auth_cookie($user->ID, true);
-            wp_redirect('https://inspiry.co.nz/shop-by-brand/');
-                // wp_redirect($_GET['redirect-link']);
+                wp_redirect($_GET['state']);
 			exit;
         }
         var_dump($userData);
     }else{
-         wp_redirect('https://inspiry.co.nz/shop-by-brand/');
+         wp_redirect($_GET['state']);
         exit;
     }
 
@@ -177,7 +179,7 @@ add_action('admin_init', 'add_google_ajax_actions');
 
 // get jwt auth token 
 function jwtTokenGoogleLogin($username, $password){
-        unset($_COOKIE['inpiryAuthToken']);
+         unset($_COOKIE['inpiryAuthToken']);
 
         // curl request for jwt token 
         $curl = curl_init();

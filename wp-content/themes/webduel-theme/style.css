@@ -106,12 +106,7 @@
 h3 {
   font-family: var(--openSans) !important;
 }
-p {
-  font-family: "Poppins", sans-serif !important;
-}
-textarea::placeholder {
-  font-family: "Poppins", sans-serif !important;
-}
+
 /*flex container*/
 .flex-row {
   display: flex;
@@ -312,7 +307,7 @@ textarea::placeholder {
 }
 
 .poppins-font {
-  font-family: "Poppins", sans-serif !important;
+  font-family: var(--openSans);
 }
 /* CAPITALIZE  */
 .upper-case {
@@ -507,7 +502,7 @@ textarea::placeholder {
 #breadcrumbs {
   color: #666666;
   text-decoration: none;
-  font-family: "Poppins", sans-serif !important;
+  font-family: var(--openSans);
   font-size: 14px;
   padding-bottom: 10px;
 }
@@ -744,4 +739,9 @@ textarea::placeholder {
 /* or element */
 .or-element {
   width: 100%;
+}
+
+/* board */
+.board-overlay {
+  display: none;
 }

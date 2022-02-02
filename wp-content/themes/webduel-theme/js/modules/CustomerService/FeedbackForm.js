@@ -31,7 +31,6 @@ class FeedbackForm {
         console.log(dataObj)
         // send data to form processor 
         const generalFormProcessor = new GeneralFormProcessor(apiRoute, dataObj, formID)
-
     }
 }
 

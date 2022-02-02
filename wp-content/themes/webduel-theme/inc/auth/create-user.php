@@ -55,7 +55,7 @@ function register_user_front_end() {
 
 // // get jwt auth token 
 function jwtTokenLogin($username, $password){
-    unset($_COOKIE['wpb_visit_time']); 
+    unset($_COOKIE['inpiryAuthToken']); 
     // curl request for jwt token 
     $curl = curl_init();
     $postData = [ "username"=> $username, 

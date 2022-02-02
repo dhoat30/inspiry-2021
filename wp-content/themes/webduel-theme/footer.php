@@ -112,7 +112,8 @@
 
 
 <!--design board container-->
-<div class="board-overlay overlay">
+<div class="overlay"></div>
+<div class="board-overlay ">
   <div class="choose-board-container" data-post-id="value" data-post-title="value">
     <div class="choose-board">Choose Board</div>
     <div class="close-icon">X</div>

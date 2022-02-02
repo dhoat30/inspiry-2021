@@ -104,7 +104,7 @@ bdi {
 }
 .single-product .woocommerce-product-attributes-item__value,
 p {
-  font-family: "Poppins", sans-serif !important;
+  font-family: var(--openSans);
   font-style: normal !important;
   font-weight: 400;
 }

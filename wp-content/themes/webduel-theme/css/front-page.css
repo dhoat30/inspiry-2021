@@ -344,7 +344,7 @@ td {
 td {
   padding: 0px 5px 0 5px;
   text-align: left;
-  font-family: "Poppins", sans-serif !important;
+  font-family: var(--openSans);
   font-size: 14px;
   font-weight: 400;
   letter-spacing: 1px;

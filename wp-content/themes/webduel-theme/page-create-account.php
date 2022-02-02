@@ -25,10 +25,10 @@
                         <input id="username" type="text" name="username" required>
                         <label for="password">Password*</label>
                         <input id="password" type="password" name="password" required>
-                        <div class="checkbox-container" >
+                        <!-- <div class="checkbox-container" >
                             <input type="checkbox" id="newsletter" name="newsletter" >
                             <label for="newsletter"> Receive the fortnightly newsletter from Inspiry.</label>
-                        </div>
+                        </div> -->
                         <div class="flex">
                             <button type="submit" class="primary-button" >CREATE ACCOUNT</button>
                            <div class="divider">Or</div>
@@ -67,7 +67,7 @@
             password: $('#create-account #password').val(),
             firstName: $('#create-account #first-name').val(),
             lastName: $('#create-account #last-name').val(),
-            subscribeNewsletter: $('#create-account #newsletter').is(":checked"), 
+           
             redirectLink: redirectLink
         }
       

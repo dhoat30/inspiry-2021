@@ -1,6 +1,6 @@
-import '../style.css';
-let $ = jQuery;
 
+let $ = jQuery;
+import '../style.css';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel';
 
@@ -194,14 +194,17 @@ document.addEventListener('DOMContentLoaded', function (event) {
           StartTextAnimation(0);
         }, 1000);
       }
-      // check if dataText[i] exists
-      if (i < dataText[i].length) {
-        // text exists! start typewriter animation
-        typeWriter(dataText[i], 0, function () {
-          // after callback (and whole text has been animated), start next text
-          StartTextAnimation(i + 1);
-        });
+      if (dataText) {
+        // check if dataText[i] exists
+        if (i < dataText[i].length) {
+          // text exists! start typewriter animation
+          typeWriter(dataText[i], 0, function () {
+            // after callback (and whole text has been animated), start next text
+            StartTextAnimation(i + 1);
+          });
+        }
       }
+
     }
     // start the text animation
     StartTextAnimation(0);

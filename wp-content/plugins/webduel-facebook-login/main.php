@@ -49,7 +49,7 @@ function login_with_facebook() {
 		margin: 5px 0;
 		background: #385499; 
 		color: white; 
-		font-family: "Poppins", sans-serif !important; 
+		font-family: var(--openSans); 
 	  }
 	  .fbBtn svg {
 		margin-right: 5px;
@@ -106,7 +106,7 @@ function webduel_facebook_login(){
 	}
 
 	if(!$accessToken){
-		wp_redirect( $_GET['redirect-link'] );
+		wp_redirect( home_url() );
 		exit;
 	}
 

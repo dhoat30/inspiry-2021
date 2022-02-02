@@ -145,12 +145,28 @@
   }
 }
 
-.customer-service-page h2 {
+.customer-service-page h3 {
   font-size: var(--mediumSize);
   font-weight: var(--regular);
   margin-bottom: 10px;
 }
-.customer-service-page h2 strong {
+.customer-service-page h3 strong {
   font-size: var(--mediumSize);
   font-weight: var(--medium);
+}
+/* privacy policy  */
+.customer-service-page p {
+  font-size: var(--paragraphSize);
+  line-height: 1.3rem;
+  margin-bottom: 10px;
+}
+.customer-service-page ul {
+  font-size: var(--paragraphSize);
+  line-height: 1.3rem;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+.customer-service-page h2 {
+  font-size: var(--columnSize);
+  margin: 30px 0 0 0;
 }

@@ -77,7 +77,7 @@
 }
 .mc4wp-alert p {
   text-align: center;
-  font-family: "Poppins", sans-serif !important;
+  font-family: var(--openSans);
 }
 
 /*last section */
