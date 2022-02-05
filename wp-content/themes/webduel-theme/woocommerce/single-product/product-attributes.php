@@ -24,39 +24,10 @@ if ( ! $product_attributes ) {
 }
 ?>
 <table class="woocommerce-product-attributes shop_attributes">
-	
-	<?php 
-	function array_reorder_keys(&$array, $keynames){
-		if(empty($array) || !is_array($array) || empty($keynames)) return;
-		if(!is_array($keynames)) $keynames = explode(',',$keynames);
-		if(!empty($keynames)) $keynames = array_reverse($keynames);
-		foreach($keynames as $n){
-			if(array_key_exists($n, $array)){
-				$newarray = array($n=>$array[$n]); //copy the node before unsetting
-				unset($array[$n]); //remove the node
-				$array = $newarray + array_filter($array); //combine copy with filtered array
-			}
-		}
-	}
-	
-	
-	
-	array_reorder_keys($product_attributes, 'attribute_pa_brands,attribute_pa_collection,attribute_pa_design-name,attribute_pa_color,attribute_pa_design-style,attribute_pa_pattern,attribute_pa_composition,attribute_pa_viscose,attribute_pa_match,attribute_pa_vertical-pattern-repeat,attribute_pa_horizontal-pattern-repeat,attribute_pa_width,attribute_pa_usage');
-
-		//print_r($product_attributes ); 
-		
-		//echo $product_attributes; 
-	foreach ( $product_attributes as $product_attribute_key => $product_attribute ) : 
-		
-		?>
-
-		<tr class="woocommerce-product-attributes-item woocommerce-product-attributes-item--<?php echo esc_attr( $product_attribute_key ); ?>">			
-				<?php 
-					 
-				?>
-					<th class="woocommerce-product-attributes-item__label"><?php echo wp_kses_post( $product_attribute['label'] ); ?></th>
-					<td class="woocommerce-product-attributes-item__value"><?php echo wp_kses_post( $product_attribute['value'] ); ?></td>
-			
+	<?php foreach ( $product_attributes as $product_attribute_key => $product_attribute ) : ?>
+		<tr class="woocommerce-product-attributes-item woocommerce-product-attributes-item--<?php echo esc_attr( $product_attribute_key ); ?>">
+			<th class="woocommerce-product-attributes-item__label"><?php echo wp_kses_post( $product_attribute['label'] ); ?></th>
+			<td class="woocommerce-product-attributes-item__value"><?php echo wp_kses_post( $product_attribute['value'] ); ?></td>
 		</tr>
 	<?php endforeach; ?>
 </table>

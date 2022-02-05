@@ -1,9 +1,0 @@
-/*specs/details styling*/ 
-.attr-title, .attr-value{ 
-    padding-bottom: 5px;
-}
-
-.bc-product-single .bc-single-product__specifications {
-    width: 100%;
-    padding-bottom: 0;
-}

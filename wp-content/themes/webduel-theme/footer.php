@@ -113,7 +113,7 @@
 
 <!--design board container-->
 <div class="overlay"></div>
-<div class="board-overlay ">
+<div class="board-overlay">
   <div class="choose-board-container" data-post-id="value" data-post-title="value">
     <div class="choose-board">Choose Board</div>
     <div class="close-icon">X</div>
@@ -204,6 +204,7 @@
 
 <!-- Optional mobile plugin (uncomment the line below to enable): -->
 <!-- <script src="/js/jquery.magnify-mobile.js"></script> -->
+
 <script>
   
   jQuery(document).ready(function ($) {

@@ -16,7 +16,8 @@
     
     <!-- windcave --> 
     <script src="https://dev.windcave.com/js/windcavepayments-seamless-v1.js"></script>
-
+        <!-- splide -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -84,11 +85,7 @@
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PS7XFHN"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-   <?php 
-    // echo $_GET['redirect-link'];
-   
   
-   ?>
     <section class="header" >
         <div class="top-banner">
             <div class="track-order">
@@ -255,147 +252,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     
 
     </section>
-<!-- 
-    <form id="login" action="login" method="post">
-            <h1>Site Login</h1>
-            <p class="status"></p>
-            <label for="username">Username</label>
-            <input id="username" type="text" name="username">
-            <label for="password">Password</label>
-            <input id="password" type="password" name="password">
-            <a class="lost" href="<?php echo wp_lostpassword_url(); ?>">Lost your password?</a>
-            
-            <div class="flex">
-                <input class="submit_button" type="submit" value="Login" name="submit">
-                <a class="btn-dk-red-border button rm-txt-dec center-align" href="<?php echo get_site_url();?>/account-profile/">Register</a>
-                <div class="medium-font-size poppins-font margin-ten center-align">Or</div>
-                <?php echo do_shortcode('[google-login]');
-                if(!is_front_page()){ 
-                    echo do_shortcode('[facebook-login]');
-                }
-                ?>
-            </div>            
-            <a class="close" href="">(close)</a>
-            <?php wp_nonce_field( 'ajax-login-nonce', 'security' ); ?>
-    </form> -->
 
-<?php 
 
-//hide join trade in navbar if the user is logged in 
-    if ( is_user_logged_in() ) {
-            ?>
-                <style>
-                     .mega-menu-item-13607{
-                         display: none !important;
-                     }
-                </style>
-            <?php 
 
-    }
-
-    ?>
-      
-        <div class="cart-popup-container box-shadow">
-            
-        <div class="cart-box">
-                <div class="flex-card">
-                        <?php
-
-                        foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
-                            $product = $cart_item['data'];
-                            $product_id = $cart_item['product_id'];
-                            $quantity = $cart_item['quantity'];
-                            $price = WC()->cart->get_product_price( $product );
-                            $subtotal = WC()->cart->get_product_subtotal( $product, $cart_item['quantity'] );
-                            $link = $product->get_permalink( $cart_item );
-                            // Anything related to $product, check $product tutorial
-                            $meta = wc_get_formatted_cart_item_data( $cart_item );
-                           
-                            ?>
-                    <!-- front end cart items cards -->
-                    <div class="product-card">
-                        <?php 
-
-                                // condition to check if the product is simple
-                        if($product->name == "Free Sample"){
-                                    // pulling information of an original product in a form of an objec†
-                        $originalProduct = wc_get_product( $cart_item["free_sample"] );
-                        	
-						if(!empty($originalProduct)){
-							$permalink = get_the_permalink($originalProduct->get_id()); 
-						$imageID = $originalProduct->image_id; 
-							$name = $originalProduct->get_name();
-						}
-                        ?>
-					
-                        <a href="<?php echo $permalink; ?>" class="rm-txt-dec">
-                            
-                            <div class="img-container">
-                                <img src="<?php echo wp_get_attachment_image_url( $imageID , 'woocommerce_thumbnail' );?>" alt="<?php echo $name;?>">
-                            </div>
-                            <div class="title-container">
-                                    <h5 class="paragraph-font-size regular"> <?php echo $quantity;?> X  Free Sample (<?php echo $name; 
-                                    ?> )
-                                    </h5>
-                            </div>
-                            
-                            <div class="price-container">
-                            <h6 class="paragraph-font-size poppins-font bold">$<?php echo number_format($product->price * $quantity) ?></h6>
-                            </div>
-                            <i class="fal fa-times remove-cart-item-btn" data-productID="<?php echo $product_id;?>"></i>
-                        </a>
-
-                        <?php
-                        }
-                        else{
-                            ?>
-                            <a href="<?php echo $link?>" class="rm-txt-dec">
-                                
-                                <div class="img-container">
-                                    <img src="<?php echo get_the_post_thumbnail_url($product_id, 'medium');?>" alt="<?php echo $product->name?>">
-                                </div>
-                                <div class="title-container">
-                                        <h5 class="paragraph-font-size regular"> <?php echo $quantity;?> X  <?php echo $product->name
-                                        ?> 
-                                        </h5>
-                                </div>
-                                
-                                <div class="price-container">
-                                <h6 class="paragraph-font-size poppins-font bold">$<?php echo number_format($product->price * $quantity); ?></h6>
-                                </div>
-                                
-                                <i class="fal fa-times remove-cart-item-btn" data-productID="<?php echo $product_id;?>"></i>
-                            </a>
-                            <?php
-                        }
-                        ?>
-                    </div>
-                
-                    <?php
-                    
-                    }
-                    
-                    ?>
-			    </div>
-                <div class="pop-up-footer">
-                    <div class="total-container">
-                        
-                        <div class="total poppins-font">
-                            Total: $<?php 
-                            $totalAmount = str_replace(".00", "", (string)number_format (WC()->cart->total, 2, ".", ""));
-                            echo number_format($totalAmount); ?>
-                        </div>
-                    </div>
-                    <div class="cont-shopping">
-                            <a class="rm-txt-dec button btn-dk-green-border btn-full-width center-align" href="#">Continue Shopping</a>
-                        </div>
-                    <div class="checkout-btn">
-                        <a class="rm-txt-dec button btn-dk-green btn-full-width center-align checkout-btn-header" href="<?php echo get_site_url();?>/cart">Checkout</a>
-                    </div>
-                </div>
-            </div>
-			
-		</div>
 
 
 

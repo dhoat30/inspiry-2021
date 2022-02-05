@@ -1,0 +1,19 @@
+.woocommerce-breadcrumb {
+  margin: 0 0 30px 0 !important;
+}
+
+/* product gallery */
+.woocommerce-product-gallery {
+  display: flex;
+}
+
+.woocommerce-product-gallery .flex-control-thumbs {
+  order: -10;
+}
+
+.woocommerce div.product div.images .flex-control-thumbs li {
+  width: 100%;
+  max-width: 150px;
+  padding-top: 0;
+  padding-bottom: 5px;
+}

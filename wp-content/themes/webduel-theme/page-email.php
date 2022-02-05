@@ -168,8 +168,8 @@
         <div class="playfair-fonts">Need help with your order? Please <a href="https://inspiry.co.nz/contact" target="_blank"> contact us</a>.</div>
     </div>
 </section>
-<!-- <img src="http://localhost/inspiry/wp-content/uploads/2021/05/image004.jpg" alt="">
-    <img src="http://localhost/inspiry/wp-content/uploads/2021/05/image005.jpg" alt=""> -->
+<!-- <img src="http://localhost/inspirynew/wp-content/uploads/2021/05/image004.jpg" alt="">
+    <img src="http://localhost/inspirynew/wp-content/uploads/2021/05/image005.jpg" alt=""> -->
  
 
 

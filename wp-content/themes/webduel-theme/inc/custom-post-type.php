@@ -9,7 +9,26 @@ add_post_type_support( "modal", "thumbnail" );
 add_post_type_support( "shop_by_brand", "trending-now" );  
 
 function register_custom_type2(){ 
+   // boards
 
+      register_post_type("boards", array(
+        'show_in_rest' => true, 
+         'has_archive' => true,
+         "supports" => array("title", "page-attributes", 'editor'), 
+         "public" => true, 
+         "show_ui" => true, 
+         "hierarchical" => true,
+         "labels" => array(
+            "name" => "Boards", 
+            "add_new_item" => "Add New Board", 
+            "edit_item" => "Edit Board", 
+            "all_items" => "All Boards", 
+            "singular_name" => "Board"
+         ), 
+         "menu_icon" => "dashicons-heart"
+      )
+      ); 
+   
    //Covid 19 updates 
    register_post_type("modal", array(
       "supports" => array("title", "editor"), 

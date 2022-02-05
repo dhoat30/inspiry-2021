@@ -4,6 +4,7 @@ get_header();
 // echo do_shortcode('[add_filter_button]'); 
 // echo '</div>'; 
 ?>
+
 <section class="home-page">
     <div class="hero-banner-container">
         <?php 
@@ -82,8 +83,11 @@ get_header();
         <h2 class="poppins-font medium-font-size thin">What we’re covering most this season</h2>                                
     </div>                                   
     
-    <div class="flex flex-row owl-carousel">
+    <div class="flex flex-row splide">
+            <div class="splide__track">
+                <ul class="splide__list">
 
+              
         <?php 
 
             $argsLoving = array(
@@ -105,21 +109,24 @@ get_header();
                 $loving->the_post(); 
 
                 ?>
-        
+        <li class="splide__slide">
             <a class="cards rm-txt-dec"  href="<?php echo get_field('category_link');?>">
             
          
                     <img loading="lazy" src="<?php echo get_the_post_thumbnail_url(null,"woocommerce_thumbnail"); ?>"
                             alt="Khroma">
-                    <div class="paragraph-font-size margin-top upper-case"  id="trending-now" ><?php echo get_the_title();?> <i class="fal fa-angle-right"></i></div>
+                    <!-- <div class="paragraph-font-size margin-top upper-case"  id="trending-now" ><?php echo get_the_title();?> <i class="fal fa-angle-right"></i></div> -->
               
             </a>
+        </li>
     
         <?php 
 
             }
             wp_reset_postdata();
             ?>
+              </ul>
+            </div>
     </div>
     
 </section>
